@@ -16,6 +16,7 @@ OldNameCall = hookmetamethod(game, "__namecall", function(Self, ...)
     return OldNameCall(Self, ...)
 end)
 -- \ ANTICHEAT BYPASS / --
+
 -- / SHAMELESS DISCORD PLUG :) (pls join) \ --
 local discordInvite = "https://discord.com/invite/PCVhAEPEsj"
 
@@ -758,7 +759,7 @@ local partsizes = {
 }
 
 local function expand(char, plr)
-    if plr == lp or plr.Team.Name == "Neutral" or plr.Team == lp.Team then return end
+    if plr and (plr == lp or plr.Team.Name == "Neutral" or plr.Team == lp.Team)then return end
     if not char then warn("char could not be found"); return end
     local part = char:FindFirstChild(config.Hitbox.Part)
     if not part then warn("Failed to expand", char); return end
