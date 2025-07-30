@@ -133,16 +133,8 @@ local config = {
     GunMods = {
         InfiniteWallbang = false,
         InstantHit = false,
-        Recoil = false,
-        RecoilX = 0.5,
-        RecoilY = 0.5
+        Recoil = false
     },
-    PlayerMods = {
-        WalkspeedEnabled = false,
-        Walkspeed = 16,
-        JumpPowerEnabled = false,
-        JumpPower = 50
-    }
 }
 -- VARIABLES --
 
@@ -835,6 +827,7 @@ local function expand(char, plr)
     if not plr then return end
     if not char then warn("char could not be found"); return end
     local part = char:FindFirstChild(config.Hitbox.Part)
+    print(config.Hitbox.Part, char:FindFirstChild(config.Hitbox.Part))
     if not part then warn("Failed to expand", char); return end
 
     if config.Hitbox.Enabled == false then
@@ -993,33 +986,6 @@ if not hooked then
     Players.LocalPlayer:Kick("Silent Aim Function not found, please rejoin!")
 end
 
-local function applyWalkspeed()
-    if not config.PlayerMods.WalkspeedEnabled then hum.WalkSpeed = 16; return end
-    local char = lp.Character
-    if not char then return end
-    local hum = char.humanoid
-    if not hum then return end
-
-    hum.Walkspeed = config.PlayerMods.Walkspeed
-end
-
-local humconnect = nil
-
-lp.CharacterAdded:Connect(function(char)
-    if char then
-        applyWalkspeed()
-    end
-
-    if humconnect ~= nil then
-        humconnect:Disconnect()
-        humconnect = nil
-    end
-
-    humconnect = humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
-        applyWalkspeed()
-    end)
-end)
-
 -- FUNCTIONS --
 
 local SilentAim = CombatTab:AddLeftGroupbox("Silent Aim", "locate-fixed")
@@ -1153,7 +1119,6 @@ local HitboxTargetPart = Hitboxes:AddDropdown("HitboxTargetPart", {
 -- HITBOXES END
 
 local GunMods = ModsTab:AddLeftGroupbox("Gun Mods", "bow-arrow")
-local PlayerMods = ModsTab:AddRightGroupbox("Player Mods", "user-round-pen")
 
 -- GUN MODS START
 local ToggleInfiniteWallbang = GunMods:AddCheckbox("ToggleInfiniteWallbang", {
@@ -1175,88 +1140,23 @@ local ToggleInstantHit = GunMods:AddCheckbox("ToggleInstantHit", {
 })
 
 local ToggleRecoil = GunMods:AddCheckbox("ToggleRecoil", {
-    Text = "Toggle Recoil Changes",
-    Disabled = true,
+    Text = "Toggle No Recoil",
     Default = false,
+    Tooltip = "Permanent",
     Callback = function(Value) -- IMPORTANT
         config.GunMods.RecoilEnabled = Value
+        game:GetService("RunService"):UnbindFromRenderStep("recoil")
+
+        local bind = game:GetService("RunService").BindToRenderStep
+        hookfunction(bind, function(name, ...)
+            if name == "recoil" then return end
+            return bind(name, ...)
+        end)
     end
 })
 
-local RecoilSliderX = GunMods:AddSlider("RecoilSliderX", {
-    Text = "Recoil X Intensity [%]",
-    Disabled = true,
-    Default = 50,
-    Min = 0,
-    Max = 100,
-    Rounding = 0,
-    Compact = false,
-    Callback = function(Value) -- IMPORTANT
-        config.GunMods.RecoilX = Value
-    end
-})
-
-local RecoilSliderY = GunMods:AddSlider("RecoilSliderY", {
-    Text = "Recoil Y Intensity [%]",
-    Disabled = true,
-    Default = 50,
-    Min = 0,
-    Max = 100,
-    Rounding = 0,
-    Compact = false,
-    Callback = function(Value) -- IMPORTANT
-        config.GunMods.RecoilY = Value
-    end
-})
 
 -- GUN MODS END
-
--- PLAYER MODS START
-local ToggleWalkspeed = PlayerMods:AddCheckbox("ToggleWalkspeed", {
-    Disabled = true,
-    Text = "Toggle Walkspeed",
-    Default = false,
-    Callback = function(Value) -- IMPORTANT
-        config.PlayerMods.WalkspeedEnabled = Value
-    end
-})
-
-local WalkspeedSlider = PlayerMods:AddSlider("WalkspeedSlider", {
-    Disabled = true,
-    Text = "Walkspeed",
-    Default = 16,
-    Min = 16,
-    Max = 500,
-    Rounding = 0,
-    Compact = false,
-    Callback = function(Value) -- IMPORTANT
-        config.PlayerMods.Walkspeed = Value
-    end
-})
-
-local ToggleJumppower = PlayerMods:AddCheckbox("ToggleJumppower", {
-    Disabled = true,
-    Text = "Toggle JumpPower",
-    Default = false,
-    Callback = function(Value) -- IMPORTANT
-        config.PlayerMods.JumpPowerEnabled = Value
-    end
-})
-
-local JumppowerSlider = PlayerMods:AddSlider("JumppowerSlider", {
-    Disabled = true,
-    Text = "JumpPower",
-    Default = 50,
-    Min = 50,
-    Max = 1000,
-    Rounding = 0,
-    Compact = false,
-    Callback = function(Value) -- IMPORTANT
-        config.PlayerMods.JumpPower = Value
-    end
-})
-
--- PLAYER MODS END
 
 local ESP = VisualsTab:AddLeftGroupbox("ESP", "square-dashed")
 local Flags = VisualsTab:AddRightGroupbox("Flags", "flag")
