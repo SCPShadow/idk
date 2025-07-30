@@ -41,8 +41,9 @@ else
         Text = "Join manually: "..discordInvite,
         Duration = 5
     })
-end
+end--]]
 -- \ SHAMELESS DISCORD PLUG :) (pls join) \ --
+
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/deividcomsono/Obsidian/refs/heads/main/Library.lua"))()
 
@@ -75,6 +76,7 @@ local Y_Offset = game:GetService("GuiService"):GetGuiInset().Y
 local runservice = game:GetService("RunService")
 local target = nil
 local targetplr = nil
+local gc = getgc(true)
 local boxes = {}
 local healthbars = {}
 local usernames = {}
@@ -148,8 +150,6 @@ local config = {
 -- FUNCTIONS --
 
 local function applyGunMods()
-    local gc = getgc(true)
-
     for i,v in pairs(gc) do
         if typeof(v) == 'table' then
             if rawget(v, "MaxDistance") and rawget(v, "Spread") and rawget(v, "MaxAmmo") and rawget(v, "Ammo") and rawget(v, "BulletVelocity") then
@@ -157,7 +157,7 @@ local function applyGunMods()
                     print("INSTANT HIT")
                     rawset(v, "BulletVelocity", 99999)
                 end
-                rawset(v, "Spread", 0) -- just always set spread to 0, its practically 0 by default anyways
+                --rawset(v, "Spread", 0) -- just always set spread to 0, its practically 0 by default anyways
             end
         end
     end
@@ -168,6 +168,14 @@ local func
 
 local consts = {
     "RocketLauncher", "GrenadeLauncher", "Penetration", "Vehicles", "Unit", "BulletVelocity", "NewPosition", "NewVelocity"
+}
+
+local gc1 = getgc(true)
+local func
+
+local consts = {
+    "RocketLauncher", "GrenadeLauncher", "Penetration", "Vehicles",
+    "Unit", "BulletVelocity", "NewPosition", "NewVelocity"
 }
 
 for i,v in pairs(gc1) do
@@ -181,20 +189,34 @@ for i,v in pairs(gc1) do
         end
 
         if found == #consts then
-            func = v
+            local info = debug.getinfo(v)
+            if info.short_src:find('ClientHit') then
+                func = v
+            end
         end
     end
 end
 
-if func then
-    local penetrationhook; penetrationhook = hookfunction(func, function(...)
-        local args = {...}
-        if config.GunMods.InfiniteWallbang then
-            print("inf penetration!!")
-            args[1].UserData.Penetration = math.huge
+for _, v in ipairs(gc1) do
+    if (typeof(v) == 'function' and islclosure(v)) then
+        local upvals = debug.getupvalues(v)
+        for i, upval in upvals do
+            if (typeof(upval) == 'function') then
+                if (upval == func) then
+                    print(i, v,func)
+                    local old = func
+                    debug.setupvalue(v, i, function(...)
+                        local args = { ... }
+                        print('inf penetration!!')
+                        if config.GunMods.InfiniteWallbang then
+                            args[1].UserData.Penetration = math.huge
+                        end
+                        return old(unpack(args))
+                    end)
+                end
+            end
         end
-        return penetrationhook(unpack(args))
-    end)
+    end
 end
 
 local function wallcheck(target)
@@ -842,14 +864,14 @@ for _,plr in pairs(Players:GetChildren()) do
 end
 
 if lp.Team.Name ~= "Neutral" and config.GunMods.InstantHit then
-    applyGunMods()
+    --applyGunMods()
 end
 lp.CharacterAdded:Connect(function(char)
     local applied = false
     char.ChildAdded:Connect(function(child)
         if child:IsA("Tool") and child:FindFirstChild("Shoot") and not applied then -- is it a gun?
             applied = true
-            applyGunMods()
+            --applyGunMods()
         end
     end)
 end)
@@ -970,6 +992,33 @@ end
 if not hooked then
     Players.LocalPlayer:Kick("Silent Aim Function not found, please rejoin!")
 end
+
+local function applyWalkspeed()
+    if not config.PlayerMods.WalkspeedEnabled then hum.WalkSpeed = 16; return end
+    local char = lp.Character
+    if not char then return end
+    local hum = char.humanoid
+    if not hum then return end
+
+    hum.Walkspeed = config.PlayerMods.Walkspeed
+end
+
+local humconnect = nil
+
+lp.CharacterAdded:Connect(function(char)
+    if char then
+        applyWalkspeed()
+    end
+
+    if humconnect ~= nil then
+        humconnect:Disconnect()
+        humconnect = nil
+    end
+
+    humconnect = humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+        applyWalkspeed()
+    end)
+end)
 
 -- FUNCTIONS --
 
