@@ -16,7 +16,6 @@ OldNameCall = hookmetamethod(game, "__namecall", function(Self, ...)
     return OldNameCall(Self, ...)
 end)
 -- \ ANTICHEAT BYPASS / --
---[[
 -- / SHAMELESS DISCORD PLUG :) (pls join) \ --
 local discordInvite = "https://discord.com/invite/PCVhAEPEsj"
 
@@ -43,7 +42,6 @@ else
     })
 end
 -- \ SHAMELESS DISCORD PLUG :) (pls join) \ --
---]]
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/deividcomsono/Obsidian/refs/heads/main/Library.lua"))()
 
