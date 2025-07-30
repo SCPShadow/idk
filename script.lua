@@ -16,7 +16,7 @@ OldNameCall = hookmetamethod(game, "__namecall", function(Self, ...)
     return OldNameCall(Self, ...)
 end)
 -- \ ANTICHEAT BYPASS / --
-
+--[[
 -- / SHAMELESS DISCORD PLUG :) (pls join) \ --
 local discordInvite = "https://discord.com/invite/PCVhAEPEsj"
 
@@ -43,6 +43,7 @@ else
     })
 end
 -- \ SHAMELESS DISCORD PLUG :) (pls join) \ --
+--]]
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/deividcomsono/Obsidian/refs/heads/main/Library.lua"))()
 
@@ -146,6 +147,56 @@ local config = {
 
 
 -- FUNCTIONS --
+
+local function applyGunMods()
+    local gc = getgc(true)
+
+    for i,v in pairs(gc) do
+        if typeof(v) == 'table' then
+            if rawget(v, "MaxDistance") and rawget(v, "Spread") and rawget(v, "MaxAmmo") and rawget(v, "Ammo") and rawget(v, "BulletVelocity") then
+                if config.GunMods.InstantHit then
+                    print("INSTANT HIT")
+                    rawset(v, "BulletVelocity", 99999)
+                end
+                rawset(v, "Spread", 0) -- just always set spread to 0, its practically 0 by default anyways
+            end
+        end
+    end
+end
+
+local gc1 = getgc()
+local func
+
+local consts = {
+    "RocketLauncher", "GrenadeLauncher", "Penetration", "Vehicles", "Unit", "BulletVelocity", "NewPosition", "NewVelocity"
+}
+
+for i,v in pairs(gc1) do
+    if typeof(v) == "function" and islclosure(v) then
+        local c = debug.getconstants(v)
+        local found = 0
+        for _,j in pairs(c) do
+            if table.find(consts, tostring(j)) then
+                found = found + 1
+            end
+        end
+
+        if found == #consts then
+            func = v
+        end
+    end
+end
+
+if func then
+    local penetrationhook; penetrationhook = hookfunction(func, function(...)
+        local args = {...}
+        if config.GunMods.InfiniteWallbang then
+            print("inf penetration!!")
+            args[1].UserData.Penetration = math.huge
+        end
+        return penetrationhook(unpack(args))
+    end)
+end
 
 local function wallcheck(target)
     local r = Ray.new(lp.Character.Head.Position, (target.Position - lp.Character.Head.Position).Unit * 3000)
@@ -760,6 +811,7 @@ local partsizes = {
 
 local function expand(char, plr)
     if plr and (plr == lp or plr.Team.Name == "Neutral" or plr.Team == lp.Team)then return end
+    if not plr then return end
     if not char then warn("char could not be found"); return end
     local part = char:FindFirstChild(config.Hitbox.Part)
     if not part then warn("Failed to expand", char); return end
@@ -772,7 +824,6 @@ local function expand(char, plr)
     end
 
     for _,v in pairs(char:GetChildren()) do
-        if plr.Team.Name == "Neutral" or plr.Team == lp.Team or plr == lp then continue end
         if v:IsA("BasePart") and partsizes[v.Name] and v.Size ~= partsizes[v.Name] and config.Hitbox.Part ~= v.Name then
             v.Size = partsizes[v.Name]
         end
@@ -790,6 +841,19 @@ for _,plr in pairs(Players:GetChildren()) do
         expand(char, plr)
     end)
 end
+
+if lp.Team.Name ~= "Neutral" and config.GunMods.InstantHit then
+    applyGunMods()
+end
+lp.CharacterAdded:Connect(function(char)
+    local applied = false
+    char.ChildAdded:Connect(function(child)
+        if child:IsA("Tool") and child:FindFirstChild("Shoot") and not applied then -- is it a gun?
+            applied = true
+            applyGunMods()
+        end
+    end)
+end)
 
 Players.PlayerAdded:Connect(function(plr)
     local char = plr.Character
@@ -1047,6 +1111,7 @@ local PlayerMods = ModsTab:AddRightGroupbox("Player Mods", "user-round-pen")
 local ToggleInfiniteWallbang = GunMods:AddCheckbox("ToggleInfiniteWallbang", {
     Text = "Toggle Infinite Wallbang",
     Default = false,
+    Tooltip = "Permanent until respawn (if you toggled off before dying)!",
     Callback = function(Value) -- IMPORTANT
         config.GunMods.InfiniteWallbang = Value
     end
@@ -1057,6 +1122,7 @@ local ToggleInstantHit = GunMods:AddCheckbox("ToggleInstantHit", {
     Default = false,
     Callback = function(Value) -- IMPORTANT
         config.GunMods.InstantHit = Value
+        applyGunMods()
     end
 })
 
