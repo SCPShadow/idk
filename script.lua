@@ -177,7 +177,7 @@ local function getnearestplr()
         end
         local c = v.Character
         if c and c:FindFirstChild("Humanoid") and c:FindFirstChild("HumanoidRootPart") then -- could possibly add ESP dead check?
-            if ((c.Humanoid.Health > 0) and config.Silent.HPCheck) then
+            if ((c.Humanoid.Health < 0) and config.Silent.HPCheck) then
                 continue
             end
             local part = c:FindFirstChild("Head")
