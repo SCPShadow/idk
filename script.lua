@@ -1,2 +1,1457 @@
--- This script was generated using the MoonVeil Obfuscator v1.3.1 [https://moonveil.cc]
-local eg,Vd,jd=getmetatable,pairs,type;local Ac=game.Players local If=Ac.LocalPlayer local cd,Jh,z,W,wa,vb,Qc,ig,he,qf,Xf=If:GetMouse(),workspace.CurrentCamera,150,game:GetService('GuiService'):GetGuiInset().Y,game:GetService('RunService'),nil,nil,0.5,'Box',true,{}Xf.size=7 Xf.padding=2 Xf.thickness=2 local Ag,Ih,Tb,ga=2,true,true,false local function _c()local t,Ya,Md,Bf,Ra,Dc,Td,ba,e,Sc,Td,ae,yb,Cb,yb,be,Yf,vf,Rb e,Cb={[107]=9374,[-12193]=10369,[-6400]=9374,[-11810]=27807,[-7345]=-13114,[22754]=-24348,[4767]=9374,[-527]=5792,[-8990]=9374,[29381]=9374,[-31874]=9374,[-8823]=17339,[25524]=-3774,[12824]=-17875,[-743]=-10470,[-2428]=20333,[-315]=-32109,[-17434]=9374,[-15348]=-5776,[12780]=9374,[30940]=6376,[-4291]=9374,[26566]=-13114,[24066]=-17875,[26847]=-7942,[9750]=28186,[19430]=-6017,[15313]=31396,[8968]=17261,[23049]=31396,[27207]=-24348,[-30385]=9374,[-32208]=-21886,[-7648]=28626,[18508]=9374,[16749]=28626,[-17407]=9374,[17222]=9374,[8540]=22852,[-17807]=9374,[31420]=31396,[-13079]=-5776,[-26437]=31120,[-6666]=9374,[-26768]=-13114,[28014]=-6017,[5751]=9374},function(Ja)return e[Ja+4103]end Rb=Cb(4437)repeat while true do if Rb==-5776 then Dc,Sc=Jh:WorldToViewportPoint(vf.Position);Ya=(Vector2 .new(cd.X,cd.Y+W)-Vector2 .new(Dc.X,Dc.Y)).Magnitude;if not(Ya<ba and Ya<z and Sc)then Rb=Cb(-10769)break else Rb=Cb(-4418)break end Rb=Cb(-35977)elseif Rb==5792 then Rb=Cb(664)break elseif Rb==22852 then ba,t,ae=9999999,nil,nil;Bf,be,Ra=pairs(Ac:GetChildren());if jd(Bf)~='function'then Rb=Cb(22744)break end;Rb=Cb(1648);elseif Rb==28186 then return t,ae elseif Rb==-3774 then Bf,be,Ra=Yf.__iter(Bf)Rb=Cb(13119)elseif Rb==31396 then if not vf then Rb=Cb(-12926)break end Rb=Cb(-19451)elseif Rb==-7942 then Yf=eg(Bf);if Yf~=nil and Yf.__iter~=nil then Rb=Cb(21421)break elseif jd(Bf)=='table'then Rb=Cb(-30540)break end Rb=Cb(-21537)elseif Rb==-32109 then t=Md.Head ba=Ya ae=Vector2 .new(Dc.X,Dc.Y)Rb=Cb(-8394)elseif Rb==9374 then yb,Td=Bf(be,Ra);Ra=yb;if Ra==nil then Rb=Cb(5647)else Rb=26984 end elseif Rb==17339 then Rb=9374 break elseif Rb==20333 then vf=Md:FindFirstChild('Head');if not(not vf)then Rb=Cb(27317)break else Rb=Cb(-15913)break end Rb=31396 elseif Rb==26984 then if Td.Team==If.Team then Rb=Cb(-16296)break end Rb=Cb(-11751)elseif Rb==28626 then if Td==If then Rb=Cb(-4630)break end Rb=Cb(23104)elseif Rb==27807 then vf=Md:FindFirstChild('HumanoidRootPart')Rb=Cb(11210)elseif Rb==31120 then Bf,be,Ra=Vd(Bf)Rb=Cb(-10503)elseif Rb==-24348 then Md=Td.Character;if not(Md and Md:FindFirstChild('Humanoid')and Md.Humanoid.Health>0 and Md:FindFirstChild('HumanoidRootPart'))then Rb=Cb(8677)break else Rb=Cb(-6531)break end Rb=Cb(25278)elseif Rb==10369 then Rb=Cb(-34488)break end end until Rb==-25146 end local function mg()local se,Ha,Zc,Gb,ua ua,se={[-16188]=-10771,[-21411]=-17955,[-25622]=-14937,[-22719]=-7427,[4196]=4762,[21390]=4762,[-32623]=16837,[16772]=-10771,[-11487]=-10771,[13182]=22608,[-25341]=-21120,[2230]=-10771,[-8428]=-10771,[15913]=-10771,[20883]=-10771},function(og)return ua[og- -18953]end Gb=se(-51576)repeat while true do if Gb==22608 then vb=nil Gb=se(-30440)elseif Gb==-10771 then Gb=se(-40364);break;elseif Gb==-21120 then vb=Ha.CFrame;Qc=Ac:FindFirstChild(Ha.Parent.Name)Gb=se(-3040)elseif Gb==-14937 then Ha,Zc=_c();if Ha then Gb=se(-44294)break else Gb=se(-5771)break end Gb=se(1930)elseif Gb==16837 then if not(If.Character)then Gb=se(-16723)break else Gb=se(-44575)break end Gb=se(-27381)end end until Gb==-17955 end local function bd()local uc uc=Drawing.new('Circle');uc.Visible=true uc.Thickness=1 uc.NumSides=50 uc.Radius=z uc.Filled=false uc.Position=Vector2 .new(cd.X,cd.Y+W)uc.Color=Color3 .fromRGB(255,255,255)return uc end local function Xa(Cg)local Qh,md,Ne,Me,G,R,nd,Bh,yc,pg,Zf,Kc,uh,Wg,Me,md,Yd,a,D,qg,lg,ea,Ff,aa,G,Ig,lg,Lc,Qa Bh,yc={[-15463]=15717,[32636]=20479,[-3383]=831,[28574]=4756,[8113]=-3358,[-11057]=-3358,[18755]=15717,[1946]=4756,[21362]=15717,[22580]=15717,[2887]=-11460,[17446]=15007,[-19294]=23796,[-16011]=23796,[18760]=-8555,[-14371]=15717,[-27634]=20226,[-14316]=4756,[5950]=15717,[-22920]=15108,[-14375]=23796,[-894]=27453,[-22983]=4756,[-19453]=20226,[-14631]=15717,[13389]=15717,[-20318]=-26724,[-23707]=18451,[-19154]=-29388,[-10672]=-18495,[-3692]=4756,[-4987]=4756,[-10597]=4756,[14748]=-14690,[8215]=32204,[14344]=15717,[8257]=-14690,[-13291]=4756,[7830]=4756,[31704]=-3358,[-14181]=15007,[7050]=10699,[-13942]=-14690,[7708]=4756,[-13265]=21639,[-1930]=15717,[1012]=15007,[7536]=-29388,[-12526]=32187,[32018]=4756,[11469]=4756},function(o)return Bh[o- -9083]end ea=yc(-32003)repeat while true do if ea==831 then pg,Lc,Ig=Vd(pg)ea=yc(4306)elseif ea==15108 then Qa,Zf,Qh,Wg=math.huge,-math.huge,math.huge,-math.huge;R,D,qg=pairs(Cg:GetChildren());if jd(R)~='function'then ea=yc(9677)break end;ea=yc(-14070);elseif ea==-18495 then R,D,qg=a.__iter(R)ea=yc(-1253)elseif ea==-8555 then a=eg(R);if a~=nil and a.__iter~=nil then ea=yc(-19755)break elseif jd(R)=='table'then ea=yc(-9977)break end ea=yc(-23399)elseif ea==4756 then md,Me=R(D,qg);qg=md;if qg==nil then ea=5374 else ea=yc(-6196)end elseif ea==32426 then Kc=Ff:PointToWorldSpace(lg);aa,Ne=Jh:WorldToViewportPoint(Kc);if not(Ne)then ea=yc(5261)break else ea=yc(-21609)break end ea=yc(-11013)elseif ea==-11460 then if not(Me:IsA('BasePart'))then ea=yc(-19680)break else ea=yc(-22348)break end ea=yc(-1375)elseif ea==21639 then Ff,uh=Me.CFrame,Me.Size/2;Yd={Vector3 .new(-uh.X,-uh.Y,-uh.Z),Vector3 .new(-uh.X,-uh.Y,uh.Z),Vector3 .new(-uh.X,uh.Y,-uh.Z),Vector3 .new(-uh.X,uh.Y,uh.Z),Vector3 .new(uh.X,-uh.Y,-uh.Z),Vector3 .new(uh.X,-uh.Y,uh.Z),Vector3 .new(uh.X,uh.Y,-uh.Z),Vector3 .new(uh.X,uh.Y,uh.Z)};pg,Lc,Ig=pairs(Yd);if jd(pg)~='function'then ea=yc(-2033)break end;ea=yc(9672);elseif ea==20479 then pg,Lc,Ig=nd.__iter(pg)ea=yc(-23454)elseif ea==5374 then Qa=math.clamp(Qa,0,1920)Zf=math.clamp(Zf,0,1920)Qh=math.clamp(Qh,0,1080)Wg=math.clamp(Wg,0,1080)return Zf,Wg,Qa,Qh elseif ea==32187 then Qa=math.min(Qa,aa.X)Zf=math.max(Zf,aa.X)Qh=math.min(Qh,aa.Y)Wg=math.max(Wg,aa.Y)ea=yc(12279)elseif ea==10699 then nd=eg(pg);if nd~=nil and nd.__iter~=nil then ea=yc(23553)break elseif jd(pg)=='table'then ea=yc(-12466)break end ea=yc(-3133)elseif ea==27453 then R,D,qg=Vd(R)ea=yc(-32066)elseif ea==15717 then G,lg=pg(Lc,Ig);Ig=G;if Ig==nil then ea=yc(-12775)else ea=32426 end end end until ea==5236 end local function Mg(hd)local ya,Aa Aa=Drawing.new('Square');Aa.Filled=false Aa.Color=Color3 .fromRGB(0,0,0)Aa.Thickness=Xf.thickness Aa.Visible=false ya=Drawing.new('Square')ya.Filled=true ya.Color=Color3 .fromRGB(0,255,0)ya.Visible=false return ya,Aa end local function oc(uf,I,K)local Kb,Gh,dd,Vf,ub,xf,gg,Sg,xe,Wf,_g,Nc,qh,_f,d,vd,Fg,Ca,E qh,dd={[21122]=-27767,[-15821]=-25670,[-12434]=5550,[-1051]=15927,[13457]=12278,[-32009]=32002,[-14703]=5550,[7229]=26562,[-8273]=-24111,[-1355]=5550,[8126]=-29678,[14011]=31704,[-18962]=-5630,[-7593]=-8739,[8251]=12278,[29777]=-29678,[-20889]=-16886,[-7331]=31704,[530]=8711,[1793]=31704,[17756]=-8739,[-9123]=-12315,[6741]=13105,[12315]=-27636,[-18526]=12278,[4005]=-29678,[26926]=-15921,[-18300]=-29678,[11359]=24122,[8617]=12278,[8452]=-8739},function(sb)return qh[sb- -18910]end vd=dd(-6595)repeat while true do if vd==24122 then xf=uf:FindFirstChild('Humanoid');if not(not xf)then vd=dd(-10784)break else vd=dd(-28033)break end vd=dd(-14905)elseif vd==-24111 then I.Visible=false K.Visible=false vd=dd(-10458)elseif vd==-29678 then d=false;if not(uf:FindFirstChild('HumanoidRootPart'))then vd=dd(-37872)break else vd=dd(-34731)break end vd=dd(-31344)elseif vd==12278 then if xf.Health<=0 and uf:FindFirstChild('isRagdolled')and uf.isRagdolled.Value==true then vd=dd(-27183)break else vd=dd(-19961)break end vd=dd(-1154)elseif vd==15927 then Gh=uf:FindFirstChild('HumanoidRootPart');if not(not Gh)then vd=dd(-26241)break else vd=dd(-11681)break end vd=31704 elseif vd==5550 then E=math.clamp(xf.Health/xf.MaxHealth,0,1);Kb,Nc,ub,Sg=Xa(uf);if not(not Kb or not Nc or not ub or not Sg)then vd=dd(-10659)break else vd=dd(-18380)break end vd=dd(-10293)elseif vd==26562 then return elseif vd==-12315 then I.Visible=false K.Visible=false return elseif vd==31704 then gg,xe,Vf=(Jh.CFrame.Position-Gh.Position).Magnitude,Xf.size,25;_g,Ca=math.clamp(xe/(gg/Vf),1,xe),Nc-Sg;Wf=Vector2 .new(ub-Xf.padding-_g,Sg);I.Position=Vector2 .new(Wf.X,Wf.Y+(Ca*(1-E)))I.Size=Vector2 .new(_g,Ca*E)K.Position=Vector2 .new(Wf.X,Wf.Y+(Ca*(1-E)))K.Size=Vector2 .new(_g,Ca*E)I.Visible=d K.Visible=d vd=dd(-26503)elseif vd==-27636 then if Ac:GetPlayerFromCharacter(uf).Team==If.team then vd=dd(-50919)break end vd=24122 elseif vd==32002 then I.Visible=false K.Visible=false return elseif vd==8711 then I.Visible=false K.Visible=false return elseif vd==-8739 then vd=dd(8016);break;elseif vd==-25670 then Fg,_f=Jh:WorldToViewportPoint(uf.HumanoidRootPart.Position);d=_f vd=dd(-33613)elseif vd==-5630 then I.Visible=false K.Visible=false return end end until vd==-15921 end local function da(j)local db,fc,mf,oa,of,we mf,of,db,we=Xa(j);fc=Drawing.new('Square');fc.Visible=true fc.Thickness=2 fc.Size=Vector2 .new((mf-db),(of-we))fc.Position=Vector2 .new(db,we)fc.Filled=false fc.ZIndex=2 fc.Color=Color3 .fromRGB(0,0,0)oa=Drawing.new('Square')oa.Visible=true oa.Thickness=1 oa.Size=Vector2 .new((mf-db),(of-we))oa.Position=Vector2 .new(db,we)oa.Filled=false oa.ZIndex=2 oa.Color=Color3 .fromRGB(255,255,255)return oa,fc end local function ib(yd)local nf,Na,Ea,U,fh,F,ld,Hh,sc,Ve,je,Mb,H,Dh,wd,Xe,Pg,fa,Ad,ic,oe,me,N,Pa,le,le,Rf,tf,ge,_,fe,Ah,ef,zg,_d,td,Df,Mb,Hh,oe,Kf,Yc Na,td={[-8587]=10038,[17575]=-13556,[1816]=11948,[-3612]=27493,[-26602]=8880,[3339]=-15099,[8272]=-56,[-24407]=32562,[-2732]=-56,[-13041]=5119,[12418]=23432,[-4111]=-5341,[2983]=-15099,[-31043]=-5341,[-4621]=-15099,[6357]=-5341,[17185]=10972,[-5745]=22747,[8714]=-56,[16538]=19123,[1317]=1118,[-31059]=23938,[-6097]=-15099,[6388]=-15099,[13885]=-13556,[-30168]=5119,[-1319]=5119,[12403]=-56,[29685]=-56,[-18433]=22747,[31888]=-56,[-5135]=-15099,[-24496]=3696,[22901]=-15099},function(Oc)return Na[Oc+-13080]end Yc=td(4493)repeat while true do if Yc==10972 then je,fe,Rf=Vd(je)Yc=td(19468)elseif Yc==27493 then Xe=eg(Pg);if Xe~=nil and Xe.__iter~=nil then Yc=td(-13522)break elseif jd(Pg)=='table'then Yc=td(-11327)break end Yc=td(44968)elseif Yc==1898 then return _d,me,fh,sc,H,tf,Ea,Ve,Ad,ic,ld,N,Pa,Dh,F,fa elseif Yc==-15099 then Mb,le=je(fe,Rf);Rf=Mb;if Rf==nil then Yc=1898 else Yc=td(29618)end elseif Yc==-30611 then oe.Thickness=1 oe.Visible=zg oe.Color=Color3 .fromRGB(0,0,0)oe.ZIndex=1 Yc=td(21794)elseif Yc==1118 then U=eg(je);if U~=nil and U.__iter~=nil then Yc=td(14896)break elseif jd(je)=='table'then Yc=td(30265)break end Yc=td(16419)elseif Yc==23432 then Ah,nf=Jh:WorldToViewportPoint(yd.HumanoidRootPart.Position);zg=nf Yc=td(-11416)elseif Yc==10038 then ef,wd,_,ge=Xa(yd);zg=false;if yd:FindFirstChild('HumanoidRootPart')then Yc=td(25498)break end Yc=3696 elseif Yc==8880 then Pg,Kf,Df=Xe.__iter(Pg)Yc=td(10348)elseif Yc==11948 then je,fe,Rf=U.__iter(je)Yc=td(6983)elseif Yc==19123 then le.Thickness=0.5 le.Visible=zg le.Color=Color3 .fromRGB(255,255,255)le.ZIndex=1 Yc=td(35981)elseif Yc==-56 then Hh,oe=Pg(Kf,Df);Df=Hh;if Df==nil then Yc=td(-17979)else Yc=-30611 end elseif Yc==32562 then Pg,Kf,Df=Vd(Pg)Yc=td(42765)elseif Yc==23938 then je,fe,Rf=pairs({_d,me,fh,sc,H,tf,Ea,Ve});if jd(je)~='function'then Yc=td(14397)break end;Yc=td(16063);elseif Yc==3696 then Ad,ic,ld,N,Pa,Dh,F,fa,_d,me,fh,sc,H,tf,Ea,Ve=Drawing.new('Line'),Drawing.new('Line'),Drawing.new('Line'),Drawing.new('Line'),Drawing.new('Line'),Drawing.new('Line'),Drawing.new('Line'),Drawing.new('Line'),Drawing.new('Line'),Drawing.new('Line'),Drawing.new('Line'),Drawing.new('Line'),Drawing.new('Line'),Drawing.new('Line'),Drawing.new('Line'),Drawing.new('Line');Pg,Kf,Df=pairs({Ad,ic,ld,N,Pa,Dh,F,fa});if jd(Pg)~='function'then Yc=td(9468)break end;Yc=td(25483);end end until Yc==8825 end local function Vg(Qe,wh,nh,Nh,gf,ce,Wa,Dg,Pc,Ee,kg,Ld,Wc,te,Nd,hg,Gf)local if_,Kd,xd,gh,gd,Te,if_,Ud,vg,Ke,hh,Ec,id,_e,Bc,hh,vg,B,ca,zd,Lg,h,rd,M,gh,qe,J,M,zb,mh,Rd,Cf,ca,qa,Bc,He,Oh,qb,cc,re,Eg,Uc,ad,Lg Rd,gd={[25613]=-17641,[-23915]=3960,[-6560]=19973,[22679]=-31472,[-3220]=18930,[-18928]=-8961,[25276]=14068,[72]=1185,[29196]=17845,[14820]=-8961,[26581]=2848,[-13967]=14068,[-9262]=-32192,[29895]=-17641,[-25675]=-9007,[27666]=18396,[7089]=18396,[-8774]=14068,[-1508]=3991,[-29848]=-19335,[10668]=-10075,[-1624]=-24266,[-3240]=2639,[14086]=18396,[1668]=-3766,[-19126]=-13626,[20527]=16225,[13547]=20760,[30222]=2848,[20169]=18396,[5043]=18396,[26727]=8343,[1731]=-31323,[-23644]=12617,[-29246]=-8961,[-21268]=-8961,[14818]=-9007,[8865]=-18806,[23661]=-28910,[22493]=23941,[-10173]=11665,[-17567]=-31472,[17918]=-26673,[23986]=1185,[21577]=-31472,[-21978]=11665,[28359]=23313,[9257]=-31472,[20625]=-17641,[-1759]=18930,[-28122]=18396,[-19240]=-23374,[8299]=14068,[-23849]=8343,[6025]=23664,[-11787]=-19335,[-31050]=8343,[-12979]=-28923,[616]=-19335,[-11956]=8343,[20599]=3960,[8079]=18396,[-22221]=8343,[14044]=-14827,[-22487]=-26673,[-1510]=-20647,[-14578]=14068,[6011]=-22377,[-30946]=25074,[22593]=1185,[9555]=-31472,[4840]=8343,[32352]=-31472,[8169]=11665,[-5506]=-31151,[-18324]=-4298,[-3763]=8343,[-616]=3960,[8931]=18930,[17560]=14068},function(pd)return Rd[pd- -2047]end zd=gd(26312)repeat while true do if zd==12617 then Cf,qe,_e=Vd(Cf)zd=gd(-33097)elseif zd==-28923 then wh.From=Vector2 .new(Eg,zb)nh.From=Vector2 .new(Eg,zb)Nh.From=Vector2 .new(Oh,zb)gf.From=Vector2 .new(Oh,zb)ce.From=Vector2 .new(Eg,re)Wa.From=Vector2 .new(Eg,re)Dg.From=Vector2 .new(Oh,re)Pc.From=Vector2 .new(Oh,re)Ee.From=Vector2 .new(Eg-1,zb)kg.From=Vector2 .new(Eg,zb)Ld.From=Vector2 .new(Oh+1,zb)Wc.From=Vector2 .new(Oh,zb)te.From=Vector2 .new(Eg-1,re)Nd.From=Vector2 .new(Eg,re)hg.From=Vector2 .new(Oh+1,re)Gf.From=Vector2 .new(Oh,re)wh.To=Vector2 .new(Eg+(Oh-Eg)/2*ig,zb)nh.To=Vector2 .new(Eg,zb+(re-zb)/2*ig)Nh.To=Vector2 .new(Oh-(Oh-Eg)/2*ig,zb)gf.To=Vector2 .new(Oh,zb+(re-zb)/2*ig)ce.To=Vector2 .new(Eg+(Oh-Eg)/2*ig,re)Wa.To=Vector2 .new(Eg,re-(re-zb)/2*ig)Dg.To=Vector2 .new(Oh-(Oh-Eg)/2*ig,re)Pc.To=Vector2 .new(Oh,re-(re-zb)/2*ig)Ee.To=Vector2 .new(Eg+(Oh-Eg)/2*ig,zb)kg.To=Vector2 .new(Eg,zb+(re-zb)/2*ig)Ld.To=Vector2 .new(Oh-(Oh-Eg)/2*ig,zb)Wc.To=Vector2 .new(Oh,zb+(re-zb)/2*ig)te.To=Vector2 .new(Eg+(Oh-Eg)/2*ig,re)Nd.To=Vector2 .new(Eg,re-(re-zb)/2*ig)hg.To=Vector2 .new(Oh-(Oh-Eg)/2*ig,re)Gf.To=Vector2 .new(Oh,re-(re-zb)/2*ig)zd=gd(-3671)break elseif zd==8343 then ca,gh=Cf(qe,_e);_e=ca;if _e==nil then zd=12074 else zd=-22320 end elseif zd==23664 then if_.Visible=false zd=gd(2996)elseif zd==20760 then B=eg(qa);if B~=nil and B.__iter~=nil then zd=gd(8621)break elseif jd(qa)=='table'then zd=gd(-20371)break end zd=gd(-16014)elseif zd==-3766 then ad=eg(Cf);if ad~=nil and ad.__iter~=nil then zd=gd(-21173)break elseif jd(Cf)=='table'then zd=gd(-25691)break end zd=gd(-24268)elseif zd==12074 then return elseif zd==-155 then return elseif zd==-4298 then qa,Te,Uc=Vd(qa)zd=gd(23229)elseif zd==-8961 then Ec,Kd=Qe.Character,{wh,nh,Nh,gf,ce,Wa,Dg,Pc,Ee,kg,Ld,Wc,te,Nd,hg,Gf};if not(not Ec)then zd=gd(20546)break else zd=gd(-5287)break end zd=1185 elseif zd==-18806 then cc,h,J=qb.__iter(cc)zd=gd(25619)elseif zd==-22377 then xd,mh,Ud=rd.__iter(xd)zd=gd(7508)elseif zd==-14827 then Cf,qe,_e=pairs(Kd);if jd(Cf)~='function'then zd=gd(-379)break end;zd=gd(24680);elseif zd==1185 then Oh,re,Eg,zb=Xa(Ec);He=false;if not(Ec:FindFirstChild('HumanoidRootPart')and Ec:FindFirstChild('isRagdolled')and Ec.isRagdolled.Value==true)then zd=gd(11997)break else zd=gd(-11309)break end zd=gd(-25962)elseif zd==3960 then qa,Te,Uc=pairs(Kd);if jd(qa)~='function'then zd=gd(11500)break end;zd=gd(-10821);elseif zd==18396 then hh,if_=cc(h,J);J=hh;if J==nil then zd=gd(21614)else zd=gd(3978)end elseif zd==-22320 then gh.Visible=false zd=gd(-14003)elseif zd==-28910 then return elseif zd==14068 then Lg,M=qa(Te,Uc);Uc=Lg;if Uc==nil then zd=gd(-15026)else zd=gd(-3557)end elseif zd==-13626 then Cf,qe,_e=ad.__iter(Cf)zd=gd(-25896)elseif zd==2639 then xd,mh,Ud=pairs(Kd);if jd(xd)~='function'then zd=gd(-32993)break end;zd=gd(30305);elseif zd==16225 then cc,h,J=pairs(boxTable);if jd(cc)~='function'then zd=gd(20446)break end;zd=gd(18122);elseif zd==17845 then vg.Visible=false zd=gd(7210)elseif zd==-31323 then xd,mh,Ud=Vd(xd)zd=gd(20632)elseif zd==-20647 then M.Visible=He zd=gd(-16625)elseif zd==-32192 then id,Ke=Jh:WorldToViewportPoint(Ec.HumanoidRootPart.Position);He=Ke zd=gd(-2663)elseif zd==3991 then cc,h,J=Vd(cc)zd=gd(12039)elseif zd==-10075 then qa,Te,Uc=B.__iter(qa)zd=gd(6252)elseif zd==23941 then qb=eg(cc);if qb~=nil and qb.__iter~=nil then zd=gd(6818)break elseif jd(cc)=='table'then zd=gd(-3555)break end zd=gd(-30169)elseif zd==23313 then if not(Qe.Team==If.team)then zd=gd(-31293)break else zd=gd(18480)break end zd=gd(-23315)elseif zd==25074 then rd=eg(xd);if rd~=nil and rd.__iter~=nil then zd=gd(3964)break elseif jd(xd)=='table'then zd=gd(-316)break end zd=gd(-19614)elseif zd==-31472 then Bc,vg=xd(mh,Ud);Ud=Bc;if Ud==nil then zd=-155 else zd=gd(27149)end end end until zd==-24266 end local function Le(za,qd,kh)local Qf,Hc,Ga,sd,pb,i,tg,Nb,Pe,cb,Be,Ob sd,cb={[-17241]=-25650,[14036]=10915,[-23860]=-30597,[4597]=22257,[-5708]=-29991,[-16830]=32486,[-30498]=-29991,[26459]=-4897,[10453]=-27345,[21437]=29030,[-22237]=4486,[31902]=22257,[9718]=-27248},function(Oe)return sd[Oe-13167]end i=cb(-10693)repeat while true do if i==29030 then Ga,pb=Jh:WorldToViewportPoint(Ob.Position);Hc=pb qd.Visible=pb kh.Visible=pb i=cb(7459)elseif i==-27248 then i=cb(-4074);break;elseif i==-4897 then Be,Nb,Qf,Pe=Xa(tg);qd.Size=Vector2 .new((Be-Qf),(Nb-Pe))qd.Position=Vector2 .new(Qf,Pe)kh.Size=Vector2 .new((Be-Qf),(Nb-Pe))kh.Position=Vector2 .new(Qf,Pe)i=cb(22885)elseif i==22257 then tg=za.Character;if not tg then i=cb(-9070)break end i=-27345 elseif i==-27345 then Hc,Ob=false,tg:FindFirstChild('HumanoidRootPart');if Ob then i=cb(34604)break else i=cb(-3663)break end i=-29991 elseif i==-30597 then if za.Team==If.team then i=cb(27203)break end i=cb(17764)elseif i==10915 then qd.Visible=false kh.Visible=false return elseif i==4486 then qd.Visible=false kh.Visible=false return elseif i==32486 then qd.Visible=false kh.Visible=false return elseif i==-29991 then if Hc then i=cb(39626)break end i=-27248 end end until i==-25650 end local function Ae(ob)local bf bf=Drawing.new('Text');bf.Text=ob.Name bf.Center=true bf.Outline=true bf.OutlineColor=Color3 .new(0,0,0)bf.Color=Color3 .new(1,1,1)bf.Size=11 return bf end local function Z(Fd,sg)local Pb,w,lh,X,ph,Ma,ch,th,Ub,jh,bg Pb,Ub={[-10042]=22071,[-3732]=-2098,[-9023]=10864,[-12777]=-203,[-29546]=603,[3792]=22071,[-26853]=-2966,[22292]=13308,[-20630]=-4601,[-31159]=22071,[-22462]=-203,[-26975]=22071,[-15084]=15835,[7720]=28930},function(Qb)return Pb[Qb+17267]end X=Ub(-20999)repeat while true do if X==15835 then w,jh,th,Ma=Xa(Fd);bg,ch=false,Fd:FindFirstChild('HumanoidRootPart');if ch then X=Ub(-26290)break else X=Ub(-37897)break end X=-203 elseif X==-2966 then sg.Position=Vector2 .new(w-((w-th)/2),Ma-sg.TextBounds.Y-Ag)X=Ub(-27309)elseif X==-4601 then sg.Visible=false return elseif X==22071 then X=Ub(-9547);break;elseif X==13308 then sg.Visible=false return elseif X==10864 then lh,ph=Jh:WorldToViewportPoint(ch.Position);bg=ph sg.Visible=ph X=Ub(-30044)elseif X==-2098 then if Ac:GetPlayerFromCharacter(Fd).Team==If.team then X=Ub(5025)break end X=15835 elseif X==-203 then if not(bg)then X=Ub(-44242)break else X=Ub(-44120)break end X=Ub(-13475)end end until X==28930 end local function Hb(hb)local sh sh=Drawing.new('Text');sh.Text=''sh.Center=true sh.Outline=true sh.OutlineColor=Color3 .new(0,0,0)sh.Color=Color3 .new(1,1,1)sh.Size=9 return sh end local function ff(Mf,jf)local nb,ra,Zb,Rc,ud,oh,Rg,Xg,Ge,Ba,s,Tg,V Rg,nb={[-15380]=10331,[5182]=-27420,[4537]=19522,[4485]=28211,[27026]=15843,[-22757]=9339,[-21125]=28211,[9984]=7519,[18265]=28211,[15173]=-14089,[11119]=17503,[22574]=10331},function(xg)return Rg[xg+21744]end Zb=nb(-17207)repeat while true do if Zb==19522 then if Ac:GetPlayerFromCharacter(Mf).Team==If.team then Zb=nb(-6571)break end Zb=7519 elseif Zb==-27420 then Ba=(Ac.LocalPlayer.Character.HumanoidRootPart.Position-ud.Position).Magnitude;Ba=math.round(Ba)s='['..tostring(Ba)..' studs]'oh,Rc=Jh:WorldToViewportPoint(ud.Position)Xg=Rc jf.Visible=Rc Zb=nb(-17259)elseif Zb==28211 then if Xg then Zb=nb(5282)break end Zb=nb(830)elseif Zb==10331 then Zb=nb(-10625);break;elseif Zb==-14089 then jf.Visible=false return elseif Zb==15843 then jf.Text=s jf.Position=Vector2 .new(ra-((ra-Tg)/2),V+jf.TextBounds.Y/2+Ag)Zb=nb(-37124)elseif Zb==7519 then ra,V,Tg,Ge=Xa(Mf);s,Xg,ud='',false,Mf:FindFirstChild('HumanoidRootPart');if not(ud)then Zb=nb(-44501)break else Zb=nb(-16562)break end Zb=nb(-3479)elseif Zb==9339 then jf.Visible=false return end end until Zb==17503 end local function yg(Ua)local Uf Uf=Drawing.new('Text');Uf.Text=''Uf.Center=true Uf.Outline=true Uf.OutlineColor=Color3 .new(0,0,0)Uf.Color=Color3 .new(1,1,1)Uf.Size=9 return Uf end local jg,Wd,Kg,l,ug={},{},{},{},{}local function Ng(Pf,bb,Hd)local Va,ye,qc,Gc,jc,dh,lb,Oa,La,eb,ah,ia,_a,Ug Ug,dh={[12231]=-6707,[2926]=24606,[-31257]=-7516,[14708]=24721,[9742]=1569,[-23399]=3869,[-1228]=-26296,[-3506]=-25077,[22908]=-21959,[-14391]=-26296,[20501]=25648,[-13803]=1569,[-20474]=-25077,[626]=-25077},function(ec)return Ug[ec+-11906]end jc=dh(24137)repeat while true do if jc==3869 then bb.Visible=false return elseif jc==-26296 then if not(Va)then jc=dh(8400)break else jc=dh(-19351)break end jc=-25077 elseif jc==-7516 then Gc=dist.TextBounds;bb.Text=qc bb.Position=Vector2 .new(ah-((ah-_a)/2),ia-bb.TextBounds.Y-Hd.TextBounds.Y-Ag-Gc.Y)jc=dh(-8568)elseif jc==-25077 then jc=dh(14832);break;elseif jc==-6707 then if Ac:GetPlayerFromCharacter(Pf).Team==If.Team then jc=dh(-11493)break end jc=dh(-1897)elseif jc==24721 then La=Pf.Humanoid.Health;qc='['..tostring(La)..'/100]'ye,eb=Jh:WorldToViewportPoint(Oa.Position)Va=eb bb.Visible=eb jc=dh(10678)elseif jc==1569 then ah,lb,_a,ia=Xa(Pf);qc,Va,Oa='',false,Pf:FindFirstChild('HumanoidRootPart');if not(Oa)then jc=dh(32407)break else jc=dh(26614)break end jc=-26296 elseif jc==25648 then bb.Visible=false return end end until jc==24606 end local Ed,Vb=bd(),Drawing.new('Line')Vb.Color=Color3 .fromRGB(255,255,255)Vb.Thickness=2 local pc;Ac.PlayerRemoving:Connect(function(ng)local Qd,ab,yf,sa,cg,dc,Za,kf,T,T,Eh,ag,bh,kc,fd,_h,yf,Yb,gb,xa,Xd,kc,Lh,Fe,yh,ed,tb,Od,De,Jd,Vc,k,Sd,Ab,dc,Fe,r,Qd,Mh,sa,Af,Nf,wg,Eh,Ab,cg,Dd,Cc,Sa,_b,wg,ne,fg,Zd,ja,kf,Of,xc,df,jb,_b,De,hc,xb,Ib,ha,Mh,cf,rg,rc,Sb,Xc,Xd,ed,Zd Od,Yb={[-25563]=-23012,[3913]=13282,[28290]=29824,[-28527]=-11974,[-1017]=-12354,[-17420]=28524,[-8560]=-28351,[-30789]=18976,[-3046]=-15344,[28761]=24799,[-4083]=-20066,[10219]=-12039,[-14085]=-22380,[-7465]=10909,[-32493]=6549,[-4232]=3495,[-21944]=6496,[-19751]=1737,[-31102]=-13883,[-10961]=23599,[-13698]=-8672,[-24973]=-12039,[-3275]=-23012,[10739]=-31568,[5897]=1737,[3804]=-13154,[29118]=213,[18112]=-13883,[-6431]=5538,[4693]=6924,[-17769]=-15136,[13613]=-28351,[-21106]=-5473,[-11755]=-16875,[-10577]=13923,[-16412]=6547,[15528]=-22702,[5009]=-30334,[-15631]=6924,[31996]=32175,[11098]=-22380,[16340]=-30190,[-15332]=-28351,[12374]=-30334,[-27100]=-28524,[-15199]=-32361,[-1945]=-13883,[-19498]=6281,[30606]=6281,[-23913]=-28351,[9428]=-23012,[31442]=7816,[31175]=-2169,[-26817]=1737,[-32093]=-22191,[-18191]=-16241,[8172]=-27932,[19053]=-3279,[10562]=1737,[3030]=-13883,[21146]=-23012,[3511]=-3121,[-3116]=6281,[-15289]=-20795,[9403]=23599,[14306]=13698,[19105]=-13883,[28952]=-8516,[-28125]=29824,[24642]=-8672,[-2823]=1737,[30366]=25390,[16567]=1748,[9367]=17031,[22218]=-2169,[-30500]=-28351,[-27848]=1737,[-24131]=-20795,[-15122]=-15344,[11430]=16465,[20084]=-3513,[-4184]=11681,[-7198]=-13883,[-24657]=-19530,[-20506]=28398,[20549]=1748,[13784]=1737,[1606]=-28351,[28316]=13876,[1648]=14110,[16180]=6281,[2102]=4954,[31215]=1748,[-9047]=16340,[-19292]=-3279,[26105]=-769,[12272]=-15344,[23666]=-15344,[11978]=-8233,[2944]=32175,[-30021]=-20795,[-27560]=-20795,[24785]=-7294,[12114]=23070,[18244]=-16279,[32391]=-20795,[9186]=-28351,[-10874]=-9618,[-30794]=13876,[17493]=-15344,[23617]=-769,[438]=5973,[3770]=-20795,[-22258]=-31568,[561]=6281,[-17423]=-30334,[-6654]=6281,[8667]=-23012,[-4829]=-30190,[-21097]=-23012,[-25128]=-15344,[20014]=5538,[-7382]=-20795,[9705]=-20795,[23628]=-2971,[23583]=-23012,[20325]=-13883,[-16669]=16380,[4740]=6281,[25947]=-13883,[-23105]=1748,[7554]=20570,[-27122]=-14875,[-1401]=-1663,[29802]=4994,[-15660]=-28351,[-8870]=24799,[-2155]=-6435,[-12526]=-32072,[14996]=-29649,[27635]=-769,[-11009]=1748,[23899]=28524,[-2313]=-23012,[12036]=-28351,[12929]=729,[-23778]=-30334,[14110]=-15344,[-594]=27084,[-13355]=-15344,[-18596]=-23012,[15792]=-23012,[780]=6547,[22322]=15226,[-30926]=-1778,[-14572]=-15344,[-5076]=-15344,[-7894]=25390,[-20826]=-22380,[13419]=-20795,[-2868]=29824,[3300]=27240,[-6395]=-29017,[-5867]=28524,[6830]=-22702,[-3474]=6924,[1278]=10909,[3655]=6281,[7161]=15226,[27747]=-26829,[-28760]=12481,[31520]=-31407,[23115]=14110,[-23402]=1748,[-6165]=13267,[22021]=27240,[-13642]=3345,[3120]=-13154,[-84]=2155,[17206]=-30334,[-20946]=-30334,[-25515]=-15344},function(Jb)return Od[Jb- -21624]end xb=Yb(-50384)repeat while true do if xb==22386 then table.remove(Wd,dc)xb=Yb(-29089)break elseif xb==16380 then xb=Yb(9896);break;elseif xb==-2971 then ja,ne,Dd=Vd(ja)xb=Yb(-18594)elseif xb==-19530 then hc=eg(Sb);if hc~=nil and hc.__iter~=nil then xb=Yb(-35266)break elseif jd(Sb)=='table'then xb=Yb(-13452)break end xb=Yb(-9588)elseif xb==-13154 then Sb,Lh,Ib=pairs(ug);if jd(Sb)~='function'then xb=Yb(-46281)break end;xb=Yb(-37284);elseif xb==-9618 then tb=eg(cf);if tb~=nil and tb.__iter~=nil then xb=Yb(-39815)break elseif jd(cf)=='table'then xb=Yb(-19522)break end xb=Yb(-41375)elseif xb==13267 then jb,Nf,k=Vd(jb)xb=Yb(-32633)elseif xb==-15136 then r=eg(rg);if r~=nil and r.__iter~=nil then xb=Yb(-12257)break elseif jd(rg)=='table'then xb=Yb(-17711)break end xb=Yb(-21063)elseif xb==16465 then ha=eg(Za);if ha~=nil and ha.__iter~=nil then xb=Yb(-33379)break elseif jd(Za)=='table'then xb=Yb(6123)break end xb=Yb(-40220)elseif xb==-22191 then yf[1]:Remove();table.remove(ug,ed)xb=Yb(-38293)break elseif xb==-14875 then rc,Vc,fg=pairs(kc);if jd(rc)~='function'then xb=Yb(7494)break end;xb=Yb(-4418);elseif xb==13698 then gb=eg(ja);if gb~=nil and gb.__iter~=nil then xb=Yb(-34150)break elseif jd(ja)=='table'then xb=Yb(2004)break end xb=Yb(-23569)elseif xb==-32072 then ja,ne,Dd=gb.__iter(ja)xb=Yb(-52726)elseif xb==3345 then Sb,Lh,Ib=hc.__iter(Sb)xb=Yb(-45537)elseif xb==-32361 then pc:Disconnect()if Vb then xb=Yb(-8695)break end xb=16340 elseif xb==-2239 then if _b[2]==ng then xb=Yb(-42130)break end xb=Yb(-41122)elseif xb==27084 then rc,Vc,fg=Sd.__iter(rc)xb=Yb(-45402)elseif xb==-12354 then Sa,xa,Xc=pairs(l);if jd(Sa)~='function'then xb=Yb(-25856)break end;xb=Yb(-36196);elseif xb==-6435 then Xd[1]:Remove();table.remove(l,Fe)xb=Yb(-17820)break elseif xb==-5473 then if not(typeof(kc[1])=='table')then xb=Yb(-24899)break else xb=Yb(-48746)break end xb=Yb(-42721)elseif xb==6549 then Qd[1]:Remove();table.remove(Kg,cg)xb=Yb(-22641)break elseif xb==28398 then jb,Nf,k=pairs(_b[1]);if jd(jb)~='function'then xb=Yb(-25808)break end;xb=Yb(-44729);elseif xb==20570 then rc,Vc,fg=Vd(rc)xb=Yb(-9250)elseif xb==-23012 then Ab,kc=Za(Of,ag);ag=Ab;if ag==nil then xb=-6308 else xb=Yb(-42730)end elseif xb==6547 then Jd,xc,_h=pairs(jg);if jd(Jd)~='function'then xb=Yb(-48724)break end;xb=Yb(-29006);elseif xb==4994 then jb,Nf,k=ab.__iter(jb)xb=Yb(-1075)elseif xb==-28524 then df=eg(Jd);if df~=nil and df.__iter~=nil then xb=Yb(-18113)break elseif jd(Jd)=='table'then xb=Yb(-52550)break end xb=Yb(-49184)elseif xb==10909 then ja,ne,Dd=pairs(Kg);if jd(ja)~='function'then xb=Yb(-7318)break end;xb=Yb(-1299);elseif xb==7816 then kf:Remove()xb=Yb(-16615)elseif xb==-1778 then Jd,xc,_h=Vd(Jd)xb=Yb(-8205)elseif xb==-30334 then Mh,kf=rc(Vc,fg);fg=Mh;if fg==nil then xb=-21774 else xb=Yb(9818)end elseif xb==-20795 then sa,De=Jd(xc,_h);_h=sa;if _h==nil then xb=Yb(-43882)else xb=15020 end elseif xb==17031 then rg,Cc,bh=r.__iter(rg)xb=Yb(8982)elseif xb==-3513 then T:Remove()xb=Yb(-24447)elseif xb==3495 then Af=eg(Sa);if Af~=nil and Af.__iter~=nil then xb=Yb(-21708)break elseif jd(Sa)=='table'then xb=Yb(-9646)break end xb=Yb(-24670)elseif xb==13282 then rg,Cc,bh=Vd(rg)xb=Yb(-24740)elseif xb==-29649 then cf,fd,yh=pairs(De[1]);if jd(cf)~='function'then xb=Yb(-32498)break end;xb=Yb(-7840);elseif xb==-27932 then Sb,Lh,Ib=Vd(Sb)xb=Yb(-20018)elseif xb==-15344 then Fe,Xd=Sa(xa,Xc);Xc=Fe;if Xc==nil then xb=Yb(-18504)else xb=-21026 end elseif xb==-11974 then Zd:Remove()xb=Yb(-45026)elseif xb==4954 then cf,fd,yh=Vd(cf)xb=Yb(-11062)elseif xb==10907 then if yf[2]==ng then xb=Yb(-53717)break end xb=Yb(-8011)elseif xb==-21774 then xb=-23012 break elseif xb==15020 then if De[2]==ng then xb=Yb(-28019)break end xb=Yb(-51645)elseif xb==-29017 then if typeof(De[1])=='table'then xb=Yb(-6628)break end;xb=-1663;elseif xb==6281 then dc,_b=rg(Cc,bh);bh=dc;if bh==nil then xb=Yb(-20346)else xb=-2239 end elseif xb==-16241 then cf,fd,yh=tb.__iter(cf)xb=Yb(-49472)elseif xb==11681 then ab=eg(jb);if ab~=nil and ab.__iter~=nil then xb=Yb(8178)break elseif jd(jb)=='table'then xb=Yb(-27789)break end xb=Yb(-5057)elseif xb==1737 then Eh,T=cf(fd,yh);yh=Eh;if yh==nil then xb=-8963 else xb=Yb(-1540)end elseif xb==-26829 then Za,Of,ag=Vd(Za)xb=Yb(-47187)elseif xb==-21026 then if not(Xd[2]==ng)then xb=Yb(2042)break else xb=Yb(-23779)break end xb=Yb(-34979)elseif xb==-6308 then table.clear(jg)xb=Yb(-38036)elseif xb==213 then Sd=eg(rc);if Sd~=nil and Sd.__iter~=nil then xb=Yb(-22218)break elseif jd(rc)=='table'then xb=Yb(-14070)break end xb=Yb(-42570)elseif xb==-13883 then cg,Qd=ja(ne,Dd);Dd=cg;if Dd==nil then xb=-12354 else xb=-26643 end elseif xb==-1663 then table.remove(jg,sa)xb=Yb(-10885)break elseif xb==1748 then wg,Zd=jb(Nf,k);k=wg;if k==nil then xb=22386 else xb=Yb(-50151)end elseif xb==-16875 then Za,Of,ag=ha.__iter(Za)xb=Yb(1959)elseif xb==-3121 then Jd,xc,_h=df.__iter(Jd)xb=Yb(-45755)elseif xb==-8233 then Sa,xa,Xc=Vd(Sa)xb=Yb(-46752)elseif xb==-28351 then ed,yf=Sb(Lh,Ib);Ib=ed;if Ib==nil then xb=16380 else xb=10907 end elseif xb==2155 then Sa,xa,Xc=Af.__iter(Sa)xb=Yb(-4131)elseif xb==16340 then if not(Ed)then xb=Yb(-42450)break else xb=Yb(-52413)break end xb=-22380 elseif xb==18976 then Ed:Remove()xb=Yb(-10526)elseif xb==-31568 then rg,Cc,bh=pairs(Wd);if jd(rg)~='function'then xb=Yb(-39393)break end;xb=Yb(-17969);elseif xb==12481 then if ng==Ac.LocalPlayer then xb=Yb(-36823)break end xb=Yb(-20844)elseif xb==729 then Vb:Remove()xb=Yb(-30671)elseif xb==-26643 then if Qd[2]==ng then xb=Yb(-54117)break end xb=Yb(4323)elseif xb==-22380 then Za,Of,ag=pairs(jg);if jd(Za)~='function'then xb=Yb(-10194)break end;xb=Yb(-12957);elseif xb==-8963 then xb=Yb(10767)break end end until xb==-31407 end);Ac.PlayerAdded:Connect(function(pa)local Bd,fb,Lf,Sf,Hf,na,Id,Ia,pf,Ic,Kh,Hg,n,Je,od,ka,Lb,kd,Fc,sf,A,Eb,Jg,Da,Jc,Pd,Se Id,pf={[27927]=28570,[6739]=23814,[-31928]=22146,[22654]=28570,[11661]=-631,[3609]=-9743,[12534]=2303,[-27356]=20136,[-6659]=-9743,[14212]=-13103,[-7430]=-9743,[-3264]=-23727,[-23467]=23947,[186]=-25789,[247]=21315,[8181]=-2360,[11532]=23947,[11268]=28570,[-4969]=30943,[-24550]=20136,[4324]=22146,[16115]=8115,[22138]=-15885,[-3852]=-9743,[-10347]=22146,[-27243]=23947,[24254]=23947},function(tc)return Id[tc+-11879]end n=pf(27994)repeat while true do if n==8115 then Jg=pa.Character or pa.CharacterAdded:Wait();if he=='Corner'then n=pf(24413)break elseif he=='Box'then n=pf(26091)break end n=pf(23147)elseif n==-25789 then Hf=Ae(Jg);Z(Jg,Hf);table.insert(Kg,{Hf,pa})n=pf(-12671)elseif n==28570 then if not(qf)then n=pf(-15364)break else n=pf(18618)break end n=pf(-11588)elseif n==2303 then Je,A,od,fb,Lb,Eb,Ia,ka,Pd,kd,Sf,Ic,Se,na,Da,sf=ib(Jg);Vg(pa,Je,A,od,fb,Lb,Eb,Ia,ka,Pd,kd,Sf,Ic,Se,na,Da,sf);table.insert(jg,{{Je,A,od,fb,Lb,Eb,Ia,ka,Pd,kd,Sf,Ic,Se,na,Da,sf},pa})n=pf(34533)elseif n==-631 then Hg=Hb(Jg);ff(Jg,Hg);table.insert(l,{Hg,pa})n=pf(-20049)elseif n==-13103 then Lf,Kh=da(Jg);Le(pa,Lf,Kh);table.insert(jg,{{Lf,Kh},pa})n=pf(39806)elseif n==-9743 then n=pf(34017);break;elseif n==22146 then if not(ga)then n=pf(8027)break else n=pf(12126)break end n=pf(15488)elseif n==23947 then if Ih then n=pf(12065)break end n=pf(-15477)elseif n==21315 then Bd=yg(Jg);Ng(Jg,Bd);table.insert(ug,{Bd,pa})n=pf(4449)elseif n==23814 then Fc,Jc=Mg(Jg);oc(Jg,Fc,Jc);table.insert(Wd,{{Fc,Jc},pa})n=pf(36133)elseif n==20136 then if not(Tb)then n=pf(16203)break else n=pf(23540)break end n=22146 end end until n==-15885 end)local Ie,pe,wc,rb,We,Qg,rh,Mc,Y,zh,la,Jf,p,Ch,Ye,kb,Ue,de,wf,va,q,vh,Ph,ue,O,Og,eh,xh,Ef,Ie,lc,f,ze,vc,ma,O vh,va={[4864]=24363,[496]=11741,[-24342]=-21903,[20123]=-16498,[-2635]=-15675,[4115]=-13946,[-7808]=-5182,[31620]=24178,[-32716]=25142,[-1766]=-5182,[16451]=-13946,[-6960]=-5182,[-12148]=25541,[-16978]=16765,[5816]=-13946,[-19099]=-23645,[-19889]=-13946,[11466]=17895,[15529]=-11537,[30333]=17895,[-19669]=-1241,[25685]=-5182,[-11035]=24363,[405]=-11537,[-31683]=-13946,[-1463]=-13946,[29469]=-13946,[2424]=24178,[2290]=27377,[-8209]=-7836,[-32277]=-13946,[13906]=-5182,[2113]=-13946,[26722]=-25656,[-22409]=-31523,[17172]=-24734,[22684]=-13946,[-25914]=-29550,[-2226]=24178,[-7740]=16442,[-3290]=11425,[18506]=24363,[7980]=-13946,[12236]=9686,[15472]=-13946,[-18244]=-13946,[11271]=-11537,[-17398]=9283,[-14854]=-15675,[-18200]=18732,[-21818]=-1874,[23909]=-16516,[20592]=-5182,[-21954]=24363,[10420]=-13946,[4896]=-16498,[-26208]=24117,[-2243]=-533,[5061]=27417},function(lf)return vh[lf- -14511]end We=va(-14015)repeat while true do if We==-1241 then We=va(-6531)break elseif We==31698 then pc=wa.RenderStepped:Connect(function()local b,ie,Fa,Tc,zc,dg,bc,Ze,hf,c,af,Ta,rf,u,y,rf,ih,m,Yg,Bg,g,C,b,c,Q,Wb,m,mb,zf,Tf,Fb,L,wb,Ka,Xb,Ze,mb,L,ac,ac,ke,Cd,Fa,ve,y,Gd,wb,nc,ee,Re,Ce,P,Db,Bb,Xb ee,P={[17084]=5449,[-9372]=18595,[-8711]=14913,[10544]=-12242,[12878]=-8825,[-26389]=-10824,[-4838]=19864,[18333]=-16749,[29960]=-8825,[2504]=18968,[8809]=-993,[-11146]=9066,[2798]=-6697,[-21841]=-8823,[20978]=12254,[16297]=-31039,[-25186]=23320,[28445]=19864,[26391]=-10824,[-9012]=6855,[29581]=20007,[-6149]=31204,[12882]=26957,[31418]=1674,[13236]=-6874,[-13495]=7570,[16716]=-10824,[-25842]=-3328,[22791]=-10824,[-20015]=-8825,[-29942]=5449,[-15442]=-21087,[11749]=-9350,[235]=13320,[17797]=-10458,[30900]=-993,[1856]=1674,[26532]=30519,[-1350]=-18065,[9121]=5449,[-210]=29214,[7279]=1674,[12197]=-12242,[11089]=-12583,[7108]=7570,[22028]=18968,[-25220]=-523,[13004]=22992,[-23300]=6680,[-455]=-8825,[13738]=19379,[11804]=-5717,[17137]=9066,[32675]=-22938,[-18986]=22449,[-24382]=13320,[28454]=5449,[-21981]=6352,[-29395]=9066,[6583]=9066,[10630]=1522,[-18371]=-993,[25723]=-12242,[7594]=6680,[8801]=29214,[31038]=-18324,[5799]=9066,[-24060]=13320,[-21064]=-22938,[25013]=5449,[5836]=9066,[12532]=19864,[9406]=-993,[-24652]=-18187,[24094]=13320,[-25072]=29557,[4912]=24384,[-23087]=-2038,[4378]=5285,[12092]=-22734,[-12693]=-29166,[-26078]=7570,[-5492]=-993,[-13204]=9066,[17176]=32524,[-12836]=19864,[-7987]=6680,[-22665]=-993,[12410]=-993,[6797]=-8825,[31501]=30519,[-28919]=5063,[18829]=13320,[-9678]=25445,[27943]=6855,[-22837]=13449,[-30533]=-22806,[22554]=13320,[-25295]=-19327,[573]=-8825,[-10398]=5449,[-24874]=19864,[2450]=-16535,[9870]=27355,[-24724]=13320,[-9558]=23581,[12896]=-8823,[-15720]=-10824,[-5049]=11236,[-10204]=-10824,[-12369]=10812,[12186]=-24325,[30873]=29254,[-744]=4699,[-7502]=19864,[-18681]=-21260,[18745]=-20801,[22013]=-22938,[14705]=9066,[16226]=5276,[-7695]=19864,[-18204]=19864,[-11852]=-993,[24233]=-20801,[-24310]=13320,[-29835]=9066,[10958]=2230,[-30717]=-10824,[-10998]=11732,[6162]=-993,[-29112]=-8825,[-15725]=2230,[-14428]=-18828,[-30693]=18968,[2526]=24384,[-9370]=-993,[-13112]=13320,[31148]=25445,[-627]=-8823,[27399]=-8825,[27407]=-993,[5540]=21489,[-14950]=-25605,[-7939]=-10824,[-13391]=6680,[30587]=-993,[-35]=-8825,[-21491]=9066,[16419]=-993,[-16222]=3397,[24769]=6855,[14379]=17961,[-29324]=4242,[26431]=5285,[-23752]=17369,[-27728]=-14007,[-13725]=9066,[16755]=6680,[-28578]=528,[5090]=19864,[12046]=-4491,[4188]=-10824},function(x)return ee[x- -12454]end bc=P(-650)repeat while true do if bc==13320 then L,wb=Tc(ve,C);C=L;if C==nil then bc=P(-21824)else bc=P(-362)end elseif bc==-18065 then Ka,Ce,ih=pairs(Wd);if jd(Ka)~='function'then bc=P(1284)break end;bc=P(-32469);elseif bc==-14007 then Wb,ie,Cd=Vd(Wb)bc=P(-41849)elseif bc==-29166 then Yg,Re,af=Db.__iter(Yg)bc=P(-7364)elseif bc==-19327 then if not(y==If)then bc=P(9574)break else bc=P(17127)break end bc=18968 elseif bc==29557 then dg,Gd,Ta=Bg.__iter(dg)bc=P(-44)elseif bc==6680 then Wb,ie,Cd=pairs(jg);if jd(Wb)~='function'then bc=P(-28676)break end;bc=P(4683);elseif bc==27355 then Vg(y,table.unpack(mb[1]))bc=P(-34295)elseif bc==19864 then rf,Fa=Yg(Re,af);af=rf;if af==nil then bc=21847 else bc=P(-42987)end elseif bc==-3328 then Tc,ve,C=pairs(l);if jd(Tc)~='function'then bc=P(-27404)break end;bc=P(-37178);elseif bc==21847 then if ga and Fb then bc=P(-37674)break end bc=P(-42396)elseif bc==17369 then Ng(g,ac[1],Fb)bc=P(-20393)elseif bc==5449 then if not(Tb)then bc=P(14953)break else bc=P(-38296)break end bc=P(-35119)elseif bc==23581 then Ka,Ce,ih=Bb.__iter(Ka)bc=P(-5657)elseif bc==6352 then if m[2]==y then bc=P(-41373)break end bc=P(-12909)elseif bc==13449 then Vb.Visible=true Vb.From=Vector2 .new(cd.X,cd.Y+W)Vb.To=Tf bc=P(18694)elseif bc==9066 then b,mb=Wb(ie,Cd);Cd=b;if Cd==nil then bc=P(11779)else bc=30456 end elseif bc==12254 then if not(he=='Corner')then bc=P(-41778)break else bc=P(-2584)break end bc=P(-13081)elseif bc==11236 then Z(g,Fa[1])Fb=Fa[1]bc=P(-20149)elseif bc==-21260 then if ac[2]==y then bc=P(-36206)break end bc=P(-43171)elseif bc==20007 then bc=-993 break elseif bc==23320 then dg,Gd,Ta=Vd(dg)bc=P(18446)elseif bc==22992 then Vb.Visible=false bc=P(-22132)elseif bc==-8825 then c,m=Ka(Ce,ih);ih=c;if ih==nil then bc=P(-35754)else bc=P(-34435)end elseif bc==18595 then nc=eg(zc);if nc~=nil and nc.__iter~=nil then bc=P(4722)break elseif jd(zc)=='table'then bc=P(-1824)break end bc=P(-22658)elseif bc==3397 then Q=eg(Wb);if Q~=nil and Q.__iter~=nil then bc=P(782)break elseif jd(Wb)=='table'then bc=P(-40182)break end bc=P(-25658)elseif bc==19379 then Bb=eg(Ka);if Bb~=nil and Bb.__iter~=nil then bc=P(-22012)break elseif jd(Ka)=='table'then bc=P(-27896)break end bc=P(-41566)elseif bc==-5717 then mg()u,Tf=_c()dg,Gd,Ta=pairs(Ac:GetChildren())if jd(dg)~='function'then bc=P(1925)break end bc=P(3965)elseif bc==-9350 then if not(qf)then bc=P(-4860)break else bc=P(-13804)break end bc=P(-25845)elseif bc==4242 then Le(y,mb[1][1],mb[1][2])bc=P(442)elseif bc==30456 then if not(mb[2]==y)then bc=P(-33945)break else bc=P(8524)break end bc=P(2251)elseif bc==10812 then Yg,Re,af=pairs(Kg);if jd(Yg)~='function'then bc=P(3843)break end;bc=P(78);elseif bc==-15999 then Ed.Position=Vector2 .new(cd.X,cd.Y+W)if u and Tf then bc=P(-35291)break else bc=P(550)break end bc=25445 elseif bc==-6874 then Wb,ie,Cd=Q.__iter(Wb)bc=P(-42289)elseif bc==-31039 then Db=eg(Yg);if Db~=nil and Db.__iter~=nil then bc=P(-25147)break elseif jd(Yg)=='table'then bc=P(18584)break end bc=P(-37328)elseif bc==5063 then oc(g,m[1][1],m[1][2])bc=P(17506)elseif bc==1522 then zc,hf,ke=Vd(zc)bc=P(4262)elseif bc==-20801 then if not(Ih)then bc=P(-3333)break else bc=P(-24823)break end bc=5449 elseif bc==17961 then Bg=eg(dg);if Bg~=nil and Bg.__iter~=nil then bc=P(-37526)break elseif jd(dg)=='table'then bc=P(-37640)break end bc=P(-6292)elseif bc==-25605 then zf=eg(Tc);if zf~=nil and zf.__iter~=nil then bc=P(-26882)break elseif jd(Tc)=='table'then bc=P(-268)break end bc=P(-36764)elseif bc==18968 then g=y.Character;if g then bc=P(-705)break end bc=P(-3645)elseif bc==-10824 then Ze,ac=zc(hf,ke);ke=Ze;if ke==nil then bc=P(4630)else bc=P(-31135)end elseif bc==25445 then bc=P(-31440);break;elseif bc==-24325 then Tc,ve,C=Vd(Tc)bc=P(-36514)elseif bc==-8823 then bc=P(6291)break elseif bc==-993 then Xb,y=dg(Gd,Ta);Ta=Xb;if Ta==nil then bc=-15999 else bc=P(-37749)end elseif bc==-18828 then Tc,ve,C=zf.__iter(Tc)bc=P(-12219)elseif bc==-21087 then Ka,Ce,ih=Vd(Ka)bc=P(14945)elseif bc==-18324 then Yg,Re,af=Vd(Yg)bc=P(-30658)elseif bc==5276 then ff(g,wb[1])bc=P(6375)elseif bc==-22806 then if Fa[2]==y then bc=P(-17503)break end bc=P(15991)elseif bc==-22734 then if wb[2]==y then bc=P(3772)break end bc=P(10100)elseif bc==32524 then zc,hf,ke=nc.__iter(zc)bc=P(13937)elseif bc==-523 then zc,hf,ke=pairs(ug);if jd(zc)~='function'then bc=P(-21826)break end;bc=P(-38843);end end until bc==22449 end)ze=false for v,Fh in pairs(getgc(true))do if not(typeof(Fh)=='function'and islclosure(Fh)and getinfo(Fh).name=='Registration')then else ze=true local gc gc=hookfunction(Fh,function(...)local ta,S,Zg,Gg Gg,Zg={[-32081]=-22155,[12622]=12147,[-6628]=12147,[-21422]=12147,[20934]=19080,[-6581]=9555},function(mc)return Gg[mc+20453]end ta=Zg(-27034)repeat while true do if ta==9555 then S=table.pack(...);if not(vb==nil)then ta=Zg(-27081)break else ta=Zg(-52534)break end ta=12147 elseif ta==12147 then S[1]=vb return gc(unpack(S,1,S.n))elseif ta==-22155 then warn('NO PLAYER FOUND')return gc(unpack(S,1,S.n))end end until ta==30557 end)end end if not ze then We=va(-36329)break end We=9686 elseif We==-533 then kb,Y,Mc=zh.__iter(kb)We=va(-46788)elseif We==27417 then if not(ga)then We=va(-15974)break else We=va(12211)break end We=va(1940)elseif We==-16516 then q,Ef,ue,lc,f,Jf,la,p,pe,Ph,Og,wf,rh,rb,xh,wc=ib(de);Vg(Ie,q,Ef,ue,lc,f,Jf,la,p,pe,Ph,Og,wf,rh,rb,xh,wc);table.insert(jg,{{q,Ef,ue,lc,f,Jf,la,p,pe,Ph,Og,wf,rh,rb,xh,wc},Ie})We=va(-605)elseif We==-23645 then vc,Ch=Mg(de);oc(de,vc,Ch);table.insert(Wd,{{vc,Ch},Ie})We=va(-25546)elseif We==-1874 then Ac.LocalPlayer:Kick("Silent Aim Function not found, please rejoin! (Make sure you\'ve spawned and chosen a team/kit before executing!!)\')")We=va(-2275)elseif We==11425 then zh=eg(kb);if zh~=nil and zh.__iter~=nil then We=va(-16754)break elseif jd(kb)=='table'then We=va(-40425)break end We=va(8173)elseif We==11741 then kb,Y,Mc=pairs(Ac:GetChildren());if jd(kb)~='function'then We=va(-17801)break end;We=va(-34400);elseif We==-21903 then if not(he=='Corner')then We=va(2661)break else We=va(9398)break end We=-5182 elseif We==9686 then We=va(-31909);break;elseif We==-25656 then ma=yg(de);Ng(de,ma);table.insert(ug,{ma,Ie})We=va(-32755)elseif We==24117 then Qg=Ae(de);Z(de,Qg);table.insert(Kg,{Qg,Ie})We=va(-32711)elseif We==25541 then de=Ie.Character;if de then We=va(-38853)break end We=va(-46194)elseif We==25142 then eh=Hb(de);ff(de,eh);table.insert(l,{eh,Ie})We=va(-9450)elseif We==-29550 then kb,Y,Mc=Vd(kb)We=va(-8695)elseif We==-5182 then if not(qf)then We=va(3995)break else We=va(-33610)break end We=va(-36465)elseif We==-24734 then if not(he=='Box')then We=va(11174)break else We=va(-12221)break end We=va(-22319)elseif We==-13946 then O,Ie=kb(Y,Mc);Mc=O;if Mc==nil then We=31698 else We=va(-22251)end elseif We==18732 then if Tb then We=va(-47227)break end We=27417 elseif We==16442 then if Ie==Ac.LocalPlayer then We=va(-34180)break end We=25541 elseif We==27377 then Ye,Ue=da(de);Le(Ie,Ye,Ue);table.insert(jg,{{Ye,Ue},Ie})We=va(-21471)elseif We==24363 then if Ih then We=va(-40719)break end We=18732 end end until We==9283
+-- / ANTICHEAT BYPASS \ --
+local OldNameCall = nil
+
+OldNameCall = hookmetamethod(game, "__namecall", function(Self, ...)
+    local Args = {...}
+    local NamecallMethod = getnamecallmethod()
+
+    if not checkcaller() and Self == game.ReplicatedStorage.Remotes.Weapon and NamecallMethod == "FireServer" and Args[1] == "ValidateSize" then
+        return
+        --Args[3] = vector.one -- used to just spoof it, this didnt work and got me banned when hitbox expander was added lol
+        --return OldNameCall(Self, unpack(Args))
+    elseif not checkcaller() and Self == game.ReplicatedStorage.Remotes.Weapon and NamecallMethod == "FireServer" and (Args[1] == "FlyBan" or Args[1] == "WalkSpeedBan" or Args[1] == "Tp" or Args[1] == "FlyStrike") then
+        return
+    end
+
+    return OldNameCall(Self, ...)
+end)
+-- \ ANTICHEAT BYPASS / --
+--[[
+-- / SHAMELESS DISCORD PLUG :) (pls join) \ --
+local discordInvite = "https://discord.com/invite/PCVhAEPEsj"
+
+local http_request = (syn and syn.request) or (http and http.request) or request
+if http_request then
+    http_request({
+        Url = "http://127.0.0.1:6463/rpc?v=1",
+        Method = "POST",
+        Headers = {
+            ["Content-Type"] = "application/json",
+            ["Origin"] = "https://discord.com"
+        },
+        Body = game:GetService("HttpService"):JSONEncode({
+            cmd = "INVITE_BROWSER",
+            args = {code = string.match(discordInvite, "discord%.com/invite/(%w+)")},
+            nonce = game:GetService("HttpService"):GenerateGUID(false)
+        })
+    })
+else
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Executor Not Supported",
+        Text = "Join manually: "..discordInvite,
+        Duration = 5
+    })
+end
+-- \ SHAMELESS DISCORD PLUG :) (pls join) \ --
+--]]
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/deividcomsono/Obsidian/refs/heads/main/Library.lua"))()
+
+local Options = Library.Options
+
+local Window = Library:CreateWindow({
+    Title = "ttokenn.xyz",
+    Footer = "Cold War | v1.0.0",
+    ToggleKeybind = Enum.KeyCode.RightShift,
+    Center = true,
+    AutoShow = true
+})
+
+local CombatTab = Window:AddTab("Combat", "locate", "Combat Features")
+local ModsTab = Window:AddTab("Mods", "hammer", "Player & Gun Mods")
+local VisualsTab = Window:AddTab("Visuals", "eye", "ESP")
+
+local UISettingsTab = Window:AddTab({
+    Name = "UI Settings",
+    Description = "UI Customization",
+    Icon = "settings"
+})
+
+-- VARIABLES --
+local Players = game.Players
+local lp = Players.LocalPlayer
+local mouse = lp:GetMouse()
+local camera = workspace.CurrentCamera
+local Y_Offset = game:GetService("GuiService"):GetGuiInset().Y
+local runservice = game:GetService("RunService")
+local target = nil
+local targetplr = nil
+local boxes = {}
+local healthbars = {}
+local usernames = {}
+local dists = {}
+local config = {
+    Enabled = false,
+    TextPadding = 2,
+    Box = {
+        Enabled = false,
+        BoxType = "Box",
+        Color = Color3.new(1,1,1),
+        Outlines = false,
+        OutlinesColor = Color3.new(0,0,0),
+        Thickness = 1,
+        CornerLength = 0.5
+    },
+    Healthbar = {
+        Enabled = false,
+        Color = Color3.new(0,1,0),
+        Background = true,
+        BackgroundColor = Color3.new(0,0,0),
+        Padding = 2,
+        Thickness = 2,
+        Size = 5
+    },
+    Name = {
+        Enabled = false,
+        Color = Color3.new(1,1,1),
+        Outlines = false,
+        OutlinesColor = Color3.new(0,0,0)
+    },
+    Distance = {
+        Enabled = false,
+        Color = Color3.new(1,1,1),
+        Outlines = false,
+        OutlinesColor = Color3.new(0,0,0)
+    },
+    Silent = {
+        Enabled = false,
+        HPCheck = false,
+        TeamCheck = false,
+        VisibleCheck = false,
+        FOV = false,
+        FOVSize = 150,
+        TargetLine = false,
+        FOVColor = Color3.new(1,1,1),
+        TargetLineColor = Color3.new(1,1,1)
+    },
+    Hitbox = {
+        Enabled = false,
+        Multiplier = 10,
+        Part = "Head"
+    },
+    GunMods = {
+        InfiniteWallbang = false,
+        InstantHit = false,
+        Recoil = false,
+        RecoilX = 0.5,
+        RecoilY = 0.5
+    },
+    PlayerMods = {
+        WalkspeedEnabled = false,
+        Walkspeed = 16,
+        JumpPowerEnabled = false,
+        JumpPower = 50
+    }
+}
+-- VARIABLES --
+
+
+-- FUNCTIONS --
+
+local function wallcheck(target)
+    local r = Ray.new(lp.Character.Head.Position, (target.Position - lp.Character.Head.Position).Unit * 3000)
+    local part, position = game:GetService("Workspace"):FindPartOnRayWithIgnoreList(r, {lp.Character}, false, true)
+    if part then
+        local humanoid = part.Parent:FindFirstChild("Humanoid")
+        if not humanoid then
+            humanoid = part.Parent.Parent:FindFirstChild("Humanoid")
+        end
+        if humanoid and target and humanoid.Parent == target.Parent then
+            local pos, visible = camera:WorldToScreenPoint(target.Position)
+            if visible then
+                return true
+            end
+        end
+    end
+    return false
+end
+
+local function getnearestplr()
+    local lowestDist = math.huge
+    local nearest = nil
+    local POS = nil
+
+    for _,v in pairs(Players:GetChildren()) do
+        if v.Team == lp.Team and config.Silent.TeamCheck then continue end -- could possibly add ESP team check?
+		if v == lp then
+            continue
+        end
+        local c = v.Character
+        if c and c:FindFirstChild("Humanoid") and c:FindFirstChild("HumanoidRootPart") then -- could possibly add ESP dead check?
+            if ((c.Humanoid.Health > 0) and config.Silent.HPCheck) then
+                continue
+            end
+            local part = c:FindFirstChild("Head")
+            if not part then
+                part = c:FindFirstChild("HumanoidRootPart") -- not really sure why i do this lol
+            end
+            if not part then
+                continue
+            end
+            if config.Silent.VisibleCheck then
+                if not wallcheck(part) then
+                    continue
+                end
+            end
+            local pos, vis = camera:WorldToViewportPoint(part.Position) -- on screen check
+            local dist = (Vector2.new(mouse.X, mouse.Y + Y_Offset) - Vector2.new(pos.X, pos.Y)).Magnitude
+            if config.Silent.FOV and not (dist < config.Silent.FOVSize) then -- check for FOV enabled and within circle
+                continue
+            end
+            if dist < lowestDist and vis then
+                nearest = c.Head
+                lowestDist = dist
+                POS = Vector2.new(pos.X, pos.Y)
+            end
+        end
+    end
+
+    return nearest, POS
+end
+
+local function updateTarget() -- this makes my frmaes plummet when i respawn
+    if lp.Character then
+        local temp, pos = getnearestplr()
+        if temp then target = temp.CFrame; targetplr = Players:FindFirstChild(temp.Parent.Name) else target = nil end
+    end
+end
+
+local function drawFov()
+    local circle = Drawing.new("Circle")
+    circle.Visible = true
+    circle.Thickness = 1
+    circle.NumSides = 50
+    circle.Filled = false
+    circle.Position = Vector2.new(mouse.X, mouse.Y + Y_Offset)
+    return circle
+end
+
+local function getCharMinMax(char)
+    local minX, maxX = math.huge, -math.huge
+    local minY, maxY = math.huge, -math.huge
+
+    for _, part in pairs(char:GetChildren()) do
+        if part:IsA("BasePart") then
+            local cf = part.CFrame
+            local size = part.Size / 2
+
+            -- Generate the 8 corners of the bounding box
+            local corners = {
+                Vector3.new(-size.X, -size.Y, -size.Z),
+                Vector3.new(-size.X, -size.Y,  size.Z),
+                Vector3.new(-size.X,  size.Y, -size.Z),
+                Vector3.new(-size.X,  size.Y,  size.Z),
+                Vector3.new( size.X, -size.Y, -size.Z),
+                Vector3.new( size.X, -size.Y,  size.Z),
+                Vector3.new( size.X,  size.Y, -size.Z),
+                Vector3.new( size.X,  size.Y,  size.Z),
+            }
+
+            for _, offset in pairs(corners) do
+                local worldPoint = cf:PointToWorldSpace(offset)
+                local screenPos, onScreen = camera:WorldToViewportPoint(worldPoint)
+                if onScreen then
+                    minX = math.min(minX, screenPos.X)
+                    maxX = math.max(maxX, screenPos.X)
+                    minY = math.min(minY, screenPos.Y)
+                    maxY = math.max(maxY, screenPos.Y)
+                end
+            end
+        end
+    end
+
+    minX = math.clamp(minX, 0, 1920)
+    maxX = math.clamp(maxX, 0, 1920)
+    minY = math.clamp(minY, 0, 1080)
+    maxY = math.clamp(maxY, 0, 1080)
+
+    return maxX, maxY, minX, minY
+end
+
+
+local function drawHealthBar(char)
+    local background = Drawing.new("Square")
+    background.Filled = false
+    background.Visible = false
+    local foreground = Drawing.new("Square")
+    foreground.Filled = true
+    foreground.Visible = false
+
+    return foreground, background
+end
+
+local function updateHealthBar(char, foreground, background)
+    if not char then return end
+    if Players:GetPlayerFromCharacter(char).Team == lp.team or Players:GetPlayerFromCharacter(char).Team.Name == "Neutral" then -- possible ESP team check option?
+        foreground.Visible = false
+        background.Visible = false
+        return
+    end
+    local hum = char:FindFirstChild("Humanoid")
+    if not hum then
+        foreground.Visible = false
+        background.Visible = false
+        return
+    end
+    if not config.Healthbar.Enabled then
+        foreground.Visible = false
+        background.Visible = false
+        return
+    end
+
+    local VIS = false
+    if char:FindFirstChild("HumanoidRootPart") then
+        local _, vis = camera:WorldToViewportPoint(char.HumanoidRootPart.Position)
+        VIS = vis
+    else
+        foreground.Visible = false
+        background.Visible = false
+        return
+    end
+
+    foreground.Color = config.Healthbar.Color
+    background.Color = config.Healthbar.BackgroundColor
+    background.Thickness = config.Healthbar.Thickness
+    
+    local health = math.clamp(hum.Health / hum.MaxHealth, 0, 1)
+    local maxX, maxY, minX, minY = getCharMinMax(char)
+    if not maxX or not maxY or not minX or not minY then
+        foreground.Visible = false
+        background.Visible = false
+        return
+    end
+
+    if hum.Health <= 0 and char:FindFirstChild("isRagdolled") and char.isRagdolled.Value == true then
+        foreground.Visible = false
+        background.Visible = false
+    else
+        local rootPart = char:FindFirstChild("HumanoidRootPart")
+        if not rootPart then return end
+
+        local distance = (camera.CFrame.Position - rootPart.Position).Magnitude
+        local baseSize = config.Healthbar.Size
+        local scaleFactor = 25 -- need to change in the future to use a fake Vector3 pos to handle scaling for me
+        local scaledSize = math.clamp(baseSize / (distance / scaleFactor), 1, baseSize)
+
+        local height = maxY - minY
+        local pos = Vector2.new(minX - config.Healthbar.Padding - scaledSize, minY)
+
+        foreground.Position = Vector2.new(pos.X, pos.Y + (height * (1 - health)))
+        foreground.Size = Vector2.new(scaledSize, height * health)
+        background.Position = Vector2.new(pos.X, pos.Y + (height * (1 - health)))
+        background.Size = Vector2.new(scaledSize, height * health)
+
+        foreground.Visible = VIS
+        background.Visible = VIS
+    end
+end
+
+local function drawBoundingBox(char)
+    local maxX, maxY, minX, minY = getCharMinMax(char)
+
+    local bg = Drawing.new("Square")
+    bg.Visible = true
+    bg.Size = Vector2.new((maxX - minX), (maxY - minY))
+    bg.Position = Vector2.new(minX, minY)
+    bg.Filled = false
+    bg.ZIndex = 2
+
+    local box = Drawing.new("Square")
+    box.Visible = true
+    box.Size = Vector2.new((maxX - minX), (maxY - minY))
+    box.Position = Vector2.new(minX, minY)
+    box.Filled = false
+    box.ZIndex = 2
+
+    return box, bg
+end
+
+local function drawCornerBoundingBox(char)
+    local maxX, maxY, minX, minY = getCharMinMax(char)
+    local VIS = false
+    if char:FindFirstChild("HumanoidRootPart") then
+        local _, vis = camera:WorldToViewportPoint(char.HumanoidRootPart.Position)
+        VIS = vis
+    end
+
+    local BGTopLeftA = Drawing.new("Line")
+    local BGTopLeftB = Drawing.new("Line")
+    local BGTopRightA = Drawing.new("Line")
+    local BGTopRightB = Drawing.new("Line")
+    local BGBottomLeftA = Drawing.new("Line")
+    local BGBottomLeftB = Drawing.new("Line")
+    local BGBottomRightA = Drawing.new("Line")
+    local BGBottomRightB = Drawing.new("Line")
+
+    local TopLeftA = Drawing.new("Line")
+    local TopLeftB = Drawing.new("Line")
+    local TopRightA = Drawing.new("Line")
+    local TopRightB = Drawing.new("Line")
+    local BottomLeftA = Drawing.new("Line")
+    local BottomLeftB = Drawing.new("Line")
+    local BottomRightA = Drawing.new("Line")
+    local BottomRightB = Drawing.new("Line")
+
+    for _,v in pairs({BGTopLeftA, BGTopLeftB, BGTopRightA, BGTopRightB, BGBottomLeftA, BGBottomLeftB, BGBottomRightA, BGBottomRightB}) do
+        v.Thickness = config.Box.Thickness + 1
+        v.Visible = VIS and config.Box.Outlines
+        v.Color = config.Box.OutlinesColor
+        v.ZIndex = 1
+    end
+
+    for _,v in pairs({TopLeftA, TopLeftB, TopRightA, TopRightB, BottomLeftA, BottomLeftB, BottomRightA, BottomRightB}) do
+        v.Thickness = config.Box.Thickness
+        v.Visible = VIS
+        v.Color = config.Box.Color
+        v.ZIndex = 1
+    end
+
+    return TopLeftA, TopLeftB, TopRightA, TopRightB, BottomLeftA, BottomLeftB, BottomRightA, BottomRightB, BGTopLeftA, BGTopLeftB, BGTopRightA, BGTopRightB, BGBottomLeftA, BGBottomLeftB, BGBottomRightA, BGBottomRightB
+end
+
+local function adjustCorners(plr, TopLeftA, TopLeftB, TopRightA, TopRightB, BottomLeftA, BottomLeftB, BottomRightA, BottomRightB, BGTopLeftA, BGTopLeftB, BGTopRightA, BGTopRightB, BGBottomLeftA, BGBottomLeftB, BGBottomRightA, BGBottomRightB)
+    if plr.Team == lp.team or plr.Team.Name == "Neutral" then -- possible ESP team check?
+        for _,v in pairs({TopLeftA, TopLeftB, TopRightA, TopRightB, BottomLeftA, BottomLeftB, BottomRightA, BottomRightB, BGTopLeftA, BGTopLeftB, BGTopRightA, BGTopRightB, BGBottomLeftA, BGBottomLeftB, BGBottomRightA, BGBottomRightB}) do
+            v.Visible = false
+        end
+        return
+    end
+    if not config.Box.Enabled then
+        for _,v in pairs(boxTable) do
+            v.Visible = false
+        end
+        return
+    end
+    local char = plr.Character
+    local boxTable = {TopLeftA, TopLeftB, TopRightA, TopRightB, BottomLeftA, BottomLeftB, BottomRightA, BottomRightB, BGTopLeftA, BGTopLeftB, BGTopRightA, BGTopRightB, BGBottomLeftA, BGBottomLeftB, BGBottomRightA, BGBottomRightB}
+
+    if not char then
+        for _,v in pairs(boxTable) do
+            v.Visible = false
+        end
+        return
+    end
+
+    local maxX, maxY, minX, minY = getCharMinMax(char)
+    local VIS = false
+    if char:FindFirstChild("HumanoidRootPart") and char:FindFirstChild("isRagdolled") and char.isRagdolled.Value == false and char.Humanoid.Health > 0 then
+        local _, vis = camera:WorldToViewportPoint(char.HumanoidRootPart.Position)
+        VIS = vis
+    else
+        for _,v in pairs(boxTable) do
+            v.Visible = false
+        end
+        return
+    end
+
+    for _,v in pairs({BGTopLeftA, BGTopLeftB, BGTopRightA, BGTopRightB, BGBottomLeftA, BGBottomLeftB, BGBottomRightA, BGBottomRightB}) do
+        v.Thickness = config.Box.Thickness + 1
+        v.Visible = VIS and config.Box.Outlines
+        v.Color = config.Box.OutlinesColor
+    end
+
+    for _,v in pairs({TopLeftA, TopLeftB, TopRightA, TopRightB, BottomLeftA, BottomLeftB, BottomRightA, BottomRightB}) do
+        v.Thickness = config.Box.Thickness
+        v.Visible = VIS
+        v.Color = config.Box.Color
+    end
+
+    TopLeftA.From = Vector2.new(minX, minY)
+    TopLeftB.From = Vector2.new(minX, minY)
+    TopRightA.From = Vector2.new(maxX, minY)
+    TopRightB.From = Vector2.new(maxX, minY)
+    BottomLeftA.From = Vector2.new(minX, maxY)
+    BottomLeftB.From = Vector2.new(minX, maxY)
+    BottomRightA.From = Vector2.new(maxX, maxY)
+    BottomRightB.From = Vector2.new(maxX, maxY)
+
+    BGTopLeftA.From = Vector2.new(minX - 1, minY) -- change 1 to thickness in future
+    BGTopLeftB.From = Vector2.new(minX, minY)
+    BGTopRightA.From = Vector2.new(maxX + 1, minY)
+    BGTopRightB.From = Vector2.new(maxX, minY)
+    BGBottomLeftA.From = Vector2.new(minX - 1, maxY)
+    BGBottomLeftB.From = Vector2.new(minX, maxY)
+    BGBottomRightA.From = Vector2.new(maxX + 1, maxY)
+    BGBottomRightB.From = Vector2.new(maxX, maxY)
+
+    TopLeftA.To = Vector2.new(minX + (maxX - minX)/2*config.Box.CornerLength, minY)
+    TopLeftB.To = Vector2.new(minX, minY + (maxY - minY)/2*config.Box.CornerLength)
+    TopRightA.To = Vector2.new(maxX - (maxX - minX)/2*config.Box.CornerLength, minY)
+    TopRightB.To = Vector2.new(maxX, minY + (maxY - minY)/2*config.Box.CornerLength)
+    BottomLeftA.To = Vector2.new(minX + (maxX - minX)/2*config.Box.CornerLength, maxY)
+    BottomLeftB.To = Vector2.new(minX, maxY - (maxY - minY)/2*config.Box.CornerLength)
+    BottomRightA.To = Vector2.new(maxX - (maxX - minX)/2*config.Box.CornerLength, maxY)
+    BottomRightB.To = Vector2.new(maxX, maxY - (maxY - minY)/2*config.Box.CornerLength)
+
+    BGTopLeftA.To = Vector2.new(minX + (maxX - minX)/2*config.Box.CornerLength, minY)
+    BGTopLeftB.To = Vector2.new(minX, minY + (maxY - minY)/2*config.Box.CornerLength)
+    BGTopRightA.To = Vector2.new(maxX - (maxX - minX)/2*config.Box.CornerLength, minY)
+    BGTopRightB.To = Vector2.new(maxX, minY + (maxY - minY)/2*config.Box.CornerLength)
+    BGBottomLeftA.To = Vector2.new(minX + (maxX - minX)/2*config.Box.CornerLength, maxY)
+    BGBottomLeftB.To = Vector2.new(minX, maxY - (maxY - minY)/2*config.Box.CornerLength)
+    BGBottomRightA.To = Vector2.new(maxX - (maxX - minX)/2*config.Box.CornerLength, maxY)
+    BGBottomRightB.To = Vector2.new(maxX, maxY - (maxY - minY)/2*config.Box.CornerLength)
+end
+
+local function adjustBoundingBox(plr, box, bg)
+    if plr.Team == lp.team or plr.Team.Name == "Neutral" then -- possible ESP team check?
+        box.Visible = false
+        bg.Visible = false
+        return
+    end
+    local char = plr.Character
+    if not char then
+        box.Visible = false
+        bg.Visible = false
+        return
+    end
+    if not config.Box.Enabled then
+        box.Visible = false
+        bg.Visible = false
+        return
+    end
+
+    local VIS = false
+
+    local hrp = char:FindFirstChild("HumanoidRootPart")
+    if hrp then--and char:FindFirstChild("isRagdolled") and char.isRagdolled.Value == true then -- TODO: check this out!!
+        local _, vis = camera:WorldToViewportPoint(hrp.Position)
+        VIS = vis
+        box.Visible = vis
+        bg.Visible = vis and config.Box.Outlines
+    else
+        box.Visible = false
+        bg.Visible = false
+        return
+    end
+
+    if VIS then
+        bg.Color = config.Box.OutlinesColor
+        bg.Thickness = config.Box.Thickness + 1
+        box.Thickness = config.Box.Thickness
+        box.Color = config.Box.Color
+        local maxX, maxY, minX, minY = getCharMinMax(char)
+        box.Size = Vector2.new((maxX - minX), (maxY - minY))
+        box.Position = Vector2.new(minX, minY)
+        bg.Size = Vector2.new((maxX - minX), (maxY - minY))
+        bg.Position = Vector2.new(minX, minY)
+    end
+end
+
+local function drawUsername(char)
+    local name = "Nil"
+    if char then name = char.Name end
+    local username = Drawing.new("Text")
+    username.Text = name
+    username.Center = true
+    username.Size = 11
+
+    return username
+end
+
+local function updateUsername(char, username)
+    if not char then return end
+    if Players:GetPlayerFromCharacter(char).Team == lp.team or Players:GetPlayerFromCharacter(char).Team.Name == "Neutral" then
+        username.Visible = false
+        return
+    end
+    if not config.Name.Enabled then
+        username.Visible = false
+        return
+    end
+    local maxX, maxY, minX, minY = getCharMinMax(char)
+
+    local VIS = false
+
+    local hrp = char:FindFirstChild("HumanoidRootPart")
+    if hrp then
+        local _, vis = camera:WorldToViewportPoint(hrp.Position)
+        VIS = vis
+        username.Visible = vis
+    else
+        username.Visible = false
+        return
+    end
+
+    if VIS then
+        username.Outline = config.Name.Outlines
+        username.OutlineColor = config.Name.OutlinesColor
+        username.Color = config.Name.Color
+        username.Position = Vector2.new(maxX - ((maxX - minX)/2), minY - username.TextBounds.Y - config.TextPadding)
+    end
+end
+
+local function drawDistance(char)
+    local dist = Drawing.new("Text")
+    dist.Text = ""
+    dist.Center = true
+    dist.Size = 9
+
+    return dist
+end
+
+local function updateDistance(char, dist)
+    if not char then print("aaa"); return end
+    if Players:GetPlayerFromCharacter(char).Team == lp.team or Players:GetPlayerFromCharacter(char).Team.Name == "Neutral" then
+        dist.Visible = false
+        return
+    end
+    if not config.Distance.Enabled then
+        dist.Visible = false
+        return
+    end
+    
+    local maxX, maxY, minX, minY = getCharMinMax(char)
+    local text = ""
+
+    local VIS = false
+
+    local hrp = char:FindFirstChild("HumanoidRootPart")
+    if hrp then
+        local distance = (Players.LocalPlayer.Character.HumanoidRootPart.Position - hrp.Position).Magnitude
+        distance = math.round(distance)
+        text = "["..tostring(distance).." studs]"
+        local _, vis = camera:WorldToViewportPoint(hrp.Position)
+        VIS = vis
+        dist.Visible = vis
+    else
+        dist.Visible = false
+        return
+    end
+
+    if VIS then
+        dist.Outline = config.Distance.Outlines
+        dist.OutlineColor = config.Distance.OutlinesColor
+        dist.Color = config.Distance.Color
+        dist.Text = text
+        dist.Position = Vector2.new(maxX - ((maxX - minX)/2), maxY + dist.TextBounds.Y/2 + config.TextPadding)
+    end
+end
+
+local fovcircle = drawFov()
+local line = Drawing.new("Line")
+line.Thickness = 2
+local whilecont
+
+Players.PlayerRemoving:Connect(function(plr)
+    if plr == Players.LocalPlayer then
+        whilecont:Disconnect()
+        if line then
+            line:Remove()
+        end
+
+        if fovcircle then
+            fovcircle:Remove()
+        end
+        
+        for _,v in pairs(boxes) do
+            if typeof(v[1]) == 'table' then -- corner esp {{espLines}, plr}
+                for _,line in pairs(v) do
+                    line:Remove()
+                end
+                continue
+            end
+        end
+        table.clear(boxes)
+    end
+
+    for i,v in pairs(boxes) do
+        if v[2] == plr then
+            if typeof(v[1]) == 'table' then -- corner esp
+                for _,line in pairs(v[1]) do
+                    line:Remove()
+                end
+                continue
+            end
+            table.remove(boxes, i)
+            break
+        end
+    end
+
+    for i,v in pairs(healthbars) do
+        if v[2] == plr then
+            for _,barpart in pairs(v[1]) do
+                barpart:Remove()
+            end
+            table.remove(healthbars, i)
+            break
+        end
+    end
+    for i,v in pairs(usernames) do
+        if v[2] == plr then
+            v[1]:Remove()
+            table.remove(usernames, i)
+            break
+        end
+    end
+    for i,v in pairs(dists) do
+        if v[2] == plr then
+            v[1]:Remove()
+            table.remove(dists, i)
+            break
+        end
+    end
+end)
+
+Players.PlayerAdded:Connect(function(plr)
+    local char = plr.Character or plr.CharacterAdded:Wait()
+    if config.Box.BoxType == "Corner" then
+        local TopLeftA, TopLeftB, TopRightA, TopRightB, BottomLeftA, BottomLeftB, BottomRightA, BottomRightB, BGTopLeftA, BGTopLeftB, BGTopRightA, BGTopRightB, BGBottomLeftA, BGBottomLeftB, BGBottomRightA, BGBottomRightB = drawCornerBoundingBox(char)
+        adjustCorners(plr, TopLeftA, TopLeftB, TopRightA, TopRightB, BottomLeftA, BottomLeftB, BottomRightA, BottomRightB, BGTopLeftA, BGTopLeftB, BGTopRightA, BGTopRightB, BGBottomLeftA, BGBottomLeftB, BGBottomRightA, BGBottomRightB)
+        table.insert(boxes, {{TopLeftA, TopLeftB, TopRightA, TopRightB, BottomLeftA, BottomLeftB, BottomRightA, BottomRightB, BGTopLeftA, BGTopLeftB, BGTopRightA, BGTopRightB, BGBottomLeftA, BGBottomLeftB, BGBottomRightA, BGBottomRightB}, plr})
+    elseif config.Box.BoxType == "Box" then
+        local box, bg = drawBoundingBox(char)
+        adjustBoundingBox(plr, box, bg)
+        table.insert(boxes, {{box, bg}, plr})
+    end
+    if config.Healthbar.Enabled then
+        local foreground, background = drawHealthBar(char)
+        updateHealthBar(char, foreground, background)
+        table.insert(healthbars, {{foreground, background}, plr})
+    end
+    if config.Name.Enabled then
+        local username = drawUsername(char)
+        updateUsername(char, username)
+        table.insert(usernames, {username, plr})
+    end
+    if config.Distance.Enabled then
+        local dist = drawDistance(char)
+        updateDistance(char, dist)
+        table.insert(dists, {dist, plr})
+    end
+end)
+
+--init boxes
+for _,v in pairs(Players:GetChildren()) do
+    if v == Players.LocalPlayer then continue end -- localplayer check
+    local char = v.Character
+    if char then
+        if config.Box.BoxType == "Corner" then
+            local TopLeftA, TopLeftB, TopRightA, TopRightB, BottomLeftA, BottomLeftB, BottomRightA, BottomRightB, BGTopLeftA, BGTopLeftB, BGTopRightA, BGTopRightB, BGBottomLeftA, BGBottomLeftB, BGBottomRightA, BGBottomRightB = drawCornerBoundingBox(char)
+            adjustCorners(v, TopLeftA, TopLeftB, TopRightA, TopRightB, BottomLeftA, BottomLeftB, BottomRightA, BottomRightB, BGTopLeftA, BGTopLeftB, BGTopRightA, BGTopRightB, BGBottomLeftA, BGBottomLeftB, BGBottomRightA, BGBottomRightB)
+            table.insert(boxes, {{TopLeftA, TopLeftB, TopRightA, TopRightB, BottomLeftA, BottomLeftB, BottomRightA, BottomRightB, BGTopLeftA, BGTopLeftB, BGTopRightA, BGTopRightB, BGBottomLeftA, BGBottomLeftB, BGBottomRightA, BGBottomRightB}, v})
+        elseif config.Box.BoxType == "Box" then
+            local box, bg = drawBoundingBox(char)
+            adjustBoundingBox(v, box, bg)
+            table.insert(boxes, {{box, bg}, v})
+        end
+        if config.Healthbar.Enabled then
+            local foreground, background = drawHealthBar(char)
+            updateHealthBar(char, foreground, background)
+            table.insert(healthbars, {{foreground, background}, v})
+        end
+        if config.Name.Enabled then
+            local username = drawUsername(char)
+            updateUsername(char, username)
+            table.insert(usernames, {username, v})
+        end
+        if config.Distance.Enabled then
+            local dist = drawDistance(char)
+            updateDistance(char, dist)
+            table.insert(dists, {dist, v})
+        end
+    end
+end
+
+local partsizes = {
+    ["Head"] = Vector3.new(1,1,1),
+    ["Torso"] = Vector3.new(2,2,1),
+    ["HumanoidRootPart"] = Vector3.new(2,2,1)
+}
+
+local function expand(char, plr)
+    if plr == lp or plr.Team.Name == "Neutral" or plr.Team == lp.Team then return end
+    if not char then warn("char could not be found"); return end
+    local part = char:FindFirstChild(config.Hitbox.Part)
+    if not part then warn("Failed to expand", char); return end
+
+    if config.Hitbox.Enabled == false then
+        char.Head.Size = partsizes["Head"]
+        char.Torso.Size = partsizes["Torso"]
+        char.HumanoidRootPart.Size = partsizes["HumanoidRootPart"]
+        return
+    end
+
+    for _,v in pairs(char:GetChildren()) do
+        if plr.Team.Name == "Neutral" or plr.Team == lp.Team or plr == lp then continue end
+        if v:IsA("BasePart") and partsizes[v.Name] and v.Size ~= partsizes[v.Name] and config.Hitbox.Part ~= v.Name then
+            v.Size = partsizes[v.Name]
+        end
+    end
+    part.Size = partsizes[part.Name] * config.Hitbox.Multiplier
+end
+
+local charaddedconnections = {}
+
+-- init hitbox expander
+for _,plr in pairs(Players:GetChildren()) do
+    local char = plr.Character
+    expand(char, plr)
+    charaddedconnections[plr] = plr.CharacterAdded:Connect(function(char)
+        expand(char, plr)
+    end)
+end
+
+Players.PlayerAdded:Connect(function(plr)
+    local char = plr.Character
+    expand(char, plr)
+    charaddedconnections[plr] = plr.CharacterAdded:Connect(function(char)
+        expand(char, plr)
+    end)
+end)
+
+Players.PlayerRemoving:Connect(function(plr)
+    if charaddedconnections[plr] then
+        charaddedconnections[plr]:Disconnect()
+        charaddedconnections[plr] = nil
+    end
+end)
+
+whilecont = runservice.RenderStepped:Connect(function()
+    updateTarget()
+    local plr, pos = getnearestplr()
+
+    for _,v in pairs(Players:GetChildren()) do
+        if v == lp then continue end
+        local char = v.Character
+        if char then
+            for i,j in pairs(healthbars) do
+                if j[2] == v then
+                    updateHealthBar(char, j[1][1], j[1][2])
+                end
+            end
+            for i,j in pairs(boxes) do
+                if j[2] == v then
+                    if config.Box.BoxType == "Corner" then -- corner
+                        if #j[1] == 16 then -- box has been fully drawn
+                            adjustCorners(v, table.unpack(j[1]))
+                        end
+                    else -- box
+                        adjustBoundingBox(v, j[1][1], j[1][2])
+                    end
+                    break
+                end
+            end
+            for i,j in pairs(usernames) do
+                if j[2] == v then
+                    updateUsername(char, j[1])
+                end
+            end
+            for i,j in pairs(dists) do
+                if j[2] == v then
+                    updateDistance(char, j[1])
+                end
+            end
+        end
+    end
+
+    if config.Silent.FOV then
+        fovcircle.Visible = true
+        fovcircle.Position = Vector2.new(mouse.X, mouse.Y + Y_Offset)
+        fovcircle.Color = config.Silent.FOVColor
+        fovcircle.Radius = config.Silent.FOVSize
+    else
+        fovcircle.Visible = false
+    end
+    if plr and pos and config.Silent.TargetLine then
+        line.Visible = true
+        line.Color = config.Silent.TargetLineColor
+        line.From = Vector2.new(mouse.X, mouse.Y + Y_Offset)
+        line.To = pos
+    else
+        line.Visible = false
+    end
+end)
+
+local hooked = false
+if lp.Team.Name ~= "Neutral" then
+    for _, f in pairs(getgc(true)) do
+        if typeof(f) == "function" and islclosure(f) and getinfo(f).name == "Registration" then
+            hooked = true
+            local original
+            original = hookfunction(f, function(...)
+                local args = table.pack(...)
+                if target == nil or config.Silent.Enabled == false then
+                    return original(unpack(args, 1, args.n))
+                end
+                args[1] = target
+
+                return original(unpack(args, 1, args.n))
+            end)
+        end
+    end
+else
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Waiting for Team Join",
+        Text = "Please join a team! The UI will not load until you do!",
+        Duration = 20
+    })
+    repeat task.wait() until lp.Team.Name ~= "Neutral"
+    repeat task.wait() until lp.Backpack:FindFirstChildWhichIsA("Tool")
+    task.wait(0.5)
+    for _, f in pairs(getgc(true)) do
+        if typeof(f) == "function" and islclosure(f) and getinfo(f).name == "Registration" then
+            hooked = true
+            local original
+            original = hookfunction(f, function(...)
+                local args = table.pack(...)
+                if target == nil or config.Silent.Enabled == false then
+                    return original(unpack(args, 1, args.n))
+                end
+                args[1] = target
+
+                return original(unpack(args, 1, args.n))
+            end)
+        end
+    end
+end
+if not hooked then
+    Players.LocalPlayer:Kick("Silent Aim Function not found, please rejoin!")
+end
+
+-- FUNCTIONS --
+
+local SilentAim = CombatTab:AddLeftGroupbox("Silent Aim", "locate-fixed")
+local Hitboxes = CombatTab:AddRightGroupbox("Hitboxes", "expand")
+
+-- SILENT AIM START
+local ToggleSilent = SilentAim:AddCheckbox("ToggleSilent", {
+    Text = "Toggle Silent Aim",
+    Default = false,
+    Callback = function(Value) -- IMPORTANT
+        config.Silent.Enabled = Value
+    end
+})
+
+local SilentHPCheck = SilentAim:AddCheckbox("SilentHPCheck", {
+    Text = "Check Target HP",
+    Default = false,
+    Callback = function(Value) -- IMPORTANT
+        config.Silent.HPCheck = Value
+    end
+})
+
+local SilentTeamCheck = SilentAim:AddCheckbox("SilentTeamCheck", {
+    Text = "Check Target Team",
+    Default = false,
+    Callback = function(Value) -- IMPORTANT
+        config.Silent.TeamCheck = Value
+    end
+})
+
+local SilentVisCheck = SilentAim:AddCheckbox("SilentVisCheck", {
+    Text = "Check Target Visible",
+    Default = false,
+    Callback = function(Value) -- IMPORTANT
+        config.Silent.VisibleCheck = Value
+    end
+})
+
+local ToggleFOV = SilentAim:AddCheckbox("ToggleFOV", {
+    Text = "Toggle Field of View",
+    Default = false,
+    Callback = function(Value) -- IMPORTANT
+        config.Silent.FOV = Value
+    end
+})
+
+local FOVSlider = SilentAim:AddSlider("FOVSlider", {
+    Text = "Field of View",
+    Default = 150,
+    Min = 1,
+    Max = 400,
+    Rounding = 0,
+    Compact = false,
+    Callback = function(Value) -- IMPORTANT
+        config.Silent.FOVSize = Value
+    end
+})
+
+local FOVColorPicker = ToggleFOV:AddColorPicker("FOVColorPicker", {
+    Default = Color3.fromRGB(255, 255, 255),
+    Title = "FOV Circle Color",
+    Transparency = 0, -- 0 to 1
+
+    Callback = function(Value) -- IMPORTANT
+        config.Silent.FOVColor = Value
+    end
+})
+
+local DrawTargetLine = SilentAim:AddCheckbox("DrawTargetLine", {
+    Text = "Draw Target Line",
+    Default = false,
+    Callback = function(Value) -- IMPORTANT
+        config.Silent.TargetLine = Value
+    end
+})
+
+local TargetLineColorPicker = DrawTargetLine:AddColorPicker("TargetLineColorPicker", {
+    Default = Color3.fromRGB(255, 255, 255),
+    Title = "Target Line Color",
+    Transparency = 0, -- 0 to 1
+
+    Callback = function(Value) -- IMPORTANT
+        config.Silent.TargetLineColor = Value
+    end
+})
+-- SILENT AIM END
+
+-- HITBOXES START
+local ToggleHitboxExpand = Hitboxes:AddCheckbox("ToggleHitboxExpand", {
+    Text = "Toggle Hitbox Expander",
+    Default = false,
+    Callback = function(Value) -- IMPORTANT
+        config.Hitbox.Enabled = Value
+        for _,plr in pairs(Players:GetChildren()) do
+            local char = plr.Character
+            expand(char)
+        end
+    end
+})
+
+local HitboxMultiplierSlider = Hitboxes:AddSlider("HitboxMultiplierSlider", {
+    Text = "Hitbox Size Multiplier",
+    Default = 10,
+    Min = 1,
+    Max = 1000,
+    Rounding = 0,
+    Compact = false,
+    Callback = function(Value) -- IMPORTANT
+        config.Hitbox.Multiplier = Value
+        for _,plr in pairs(Players:GetChildren()) do
+            local char = plr.Character
+            expand(char)
+        end
+    end
+})
+
+local HitboxTargetPart = Hitboxes:AddDropdown("HitboxTargetPart", {
+    Values = {"Head", "Torso", "HumanoidRootPart"},
+    Default = 1, -- Index of the default option
+    Multi = false, -- Whether to allow multiple selections
+    Text = "Hitbox Expander Target",
+    Tooltip = "The hitbox part that will be expanded",
+    Callback = function(Value)
+        config.Hitbox.Part = Value -- IMPORTANT
+        for _,plr in pairs(Players:GetChildren()) do
+            local char = plr.Character
+            expand(char)
+        end
+    end
+})
+-- HITBOXES END
+
+local GunMods = ModsTab:AddLeftGroupbox("Gun Mods", "bow-arrow")
+local PlayerMods = ModsTab:AddRightGroupbox("Player Mods", "user-round-pen")
+
+-- GUN MODS START
+local ToggleInfiniteWallbang = GunMods:AddCheckbox("ToggleInfiniteWallbang", {
+    Text = "Toggle Infinite Wallbang",
+    Default = false,
+    Callback = function(Value) -- IMPORTANT
+        config.GunMods.InfiniteWallbang = Value
+    end
+})
+
+local ToggleInstantHit = GunMods:AddCheckbox("ToggleInstantHit", {
+    Text = "Toggle Instant Hit",
+    Default = false,
+    Callback = function(Value) -- IMPORTANT
+        config.GunMods.InstantHit = Value
+    end
+})
+
+local ToggleRecoil = GunMods:AddCheckbox("ToggleRecoil", {
+    Text = "Toggle Recoil Changes",
+    Disabled = true,
+    Default = false,
+    Callback = function(Value) -- IMPORTANT
+        config.GunMods.RecoilEnabled = Value
+    end
+})
+
+local RecoilSliderX = GunMods:AddSlider("RecoilSliderX", {
+    Text = "Recoil X Intensity [%]",
+    Disabled = true,
+    Default = 50,
+    Min = 0,
+    Max = 100,
+    Rounding = 0,
+    Compact = false,
+    Callback = function(Value) -- IMPORTANT
+        config.GunMods.RecoilX = Value
+    end
+})
+
+local RecoilSliderY = GunMods:AddSlider("RecoilSliderY", {
+    Text = "Recoil Y Intensity [%]",
+    Disabled = true,
+    Default = 50,
+    Min = 0,
+    Max = 100,
+    Rounding = 0,
+    Compact = false,
+    Callback = function(Value) -- IMPORTANT
+        config.GunMods.RecoilY = Value
+    end
+})
+
+-- GUN MODS END
+
+-- PLAYER MODS START
+local ToggleWalkspeed = PlayerMods:AddCheckbox("ToggleWalkspeed", {
+    Disabled = true,
+    Text = "Toggle Walkspeed",
+    Default = false,
+    Callback = function(Value) -- IMPORTANT
+        config.PlayerMods.WalkspeedEnabled = Value
+    end
+})
+
+local WalkspeedSlider = PlayerMods:AddSlider("WalkspeedSlider", {
+    Disabled = true,
+    Text = "Walkspeed",
+    Default = 16,
+    Min = 16,
+    Max = 500,
+    Rounding = 0,
+    Compact = false,
+    Callback = function(Value) -- IMPORTANT
+        config.PlayerMods.Walkspeed = Value
+    end
+})
+
+local ToggleJumppower = PlayerMods:AddCheckbox("ToggleJumppower", {
+    Disabled = true,
+    Text = "Toggle JumpPower",
+    Default = false,
+    Callback = function(Value) -- IMPORTANT
+        config.PlayerMods.JumpPowerEnabled = Value
+    end
+})
+
+local JumppowerSlider = PlayerMods:AddSlider("JumppowerSlider", {
+    Disabled = true,
+    Text = "JumpPower",
+    Default = 50,
+    Min = 50,
+    Max = 1000,
+    Rounding = 0,
+    Compact = false,
+    Callback = function(Value) -- IMPORTANT
+        config.PlayerMods.JumpPower = Value
+    end
+})
+
+-- PLAYER MODS END
+
+local ESP = VisualsTab:AddLeftGroupbox("ESP", "square-dashed")
+local Flags = VisualsTab:AddRightGroupbox("Flags", "flag")
+
+-- ESP START
+
+local DrawBoxes = ESP:AddCheckbox("DrawBoxes", {
+    Text = "Draw Boxes",
+    Default = false,
+    Callback = function(Value) -- IMPORTANT
+        config.Box.Enabled = Value
+    end
+})
+
+local BoxesType = ESP:AddDropdown("BoxesType", {
+    Values = {"Box", "Corner"},
+    Default = 1, -- Index of the default option
+    Multi = false, -- Whether to allow multiple selections
+    Text = "ESP Box Type",
+    Tooltip = "The type of Box ESP to be drawn",
+    Callback = function(Value)
+        config.Box.BoxType = Value -- IMPORTANT
+        for _,v in pairs(boxes) do
+            if typeof(v[1]) == 'table' then -- corner esp {{espLines}, plr}
+                for _,line in pairs(v[1]) do
+                    line:Remove()
+                end
+                continue
+            end
+        end
+        table.clear(boxes)
+        for _,v in pairs(Players:GetChildren()) do
+            if v == lp then continue end
+            local char = v.Character
+            if not char then print("continued"); continue end
+            if config.Box.BoxType == "Corner" then
+                local TopLeftA, TopLeftB, TopRightA, TopRightB, BottomLeftA, BottomLeftB, BottomRightA, BottomRightB, BGTopLeftA, BGTopLeftB, BGTopRightA, BGTopRightB, BGBottomLeftA, BGBottomLeftB, BGBottomRightA, BGBottomRightB = drawCornerBoundingBox(char)
+                adjustCorners(v, TopLeftA, TopLeftB, TopRightA, TopRightB, BottomLeftA, BottomLeftB, BottomRightA, BottomRightB, BGTopLeftA, BGTopLeftB, BGTopRightA, BGTopRightB, BGBottomLeftA, BGBottomLeftB, BGBottomRightA, BGBottomRightB)
+                table.insert(boxes, {{TopLeftA, TopLeftB, TopRightA, TopRightB, BottomLeftA, BottomLeftB, BottomRightA, BottomRightB, BGTopLeftA, BGTopLeftB, BGTopRightA, BGTopRightB, BGBottomLeftA, BGBottomLeftB, BGBottomRightA, BGBottomRightB}, v})
+            elseif config.Box.BoxType == "Box" then
+                local box, bg = drawBoundingBox(char)
+                adjustBoundingBox(v, box, bg)
+                table.insert(boxes, {{box, bg}, v})
+            end
+        end
+    end
+})
+
+local BoxesOutline = ESP:AddCheckbox("BoxesOutline", {
+    Text = "Draw Box Outlines",
+    Default = false,
+    Callback = function(Value) -- IMPORTANT
+        config.Box.Outlines = Value
+    end
+})
+
+local BoxesOutlineColor = BoxesOutline:AddColorPicker("BoxesOutlineColor", {
+    Default = Color3.fromRGB(0, 0, 0),
+    Title = "Box Outline Color",
+    Transparency = 0, -- 0 to 1
+
+    Callback = function(Value) -- IMPORTANT
+        config.Box.OutlinesColor = Value
+    end
+})
+
+local BoxesThickness = ESP:AddSlider("BoxesThickness", {
+    Text = "Box Thickness",
+    Default = 1,
+    Min = 1,
+    Max = 5,
+    Rounding = 0,
+    Compact = false,
+    Callback = function(Value) -- IMPORTANT
+        config.Box.Thickness = Value
+    end
+})
+
+local CornerLength = ESP:AddSlider("CornerLength", {
+    Text = "Corner Length [%]",
+    Default = 50,
+    Min = 1,
+    Max = 100,
+    Rounding = 0,
+    Compact = false,
+    Callback = function(Value) -- IMPORTANT
+        config.Box.CornerLength = Value/100
+    end
+})
+
+local BoxesColor = DrawBoxes:AddColorPicker("BoxesColor", {
+    Default = Color3.fromRGB(255, 255, 255),
+    Title = "Box Color",
+    Transparency = 0, -- 0 to 1
+
+    Callback = function(Value) -- IMPORTANT
+        config.Box.Color = Value
+    end
+})
+
+-- healthbars
+
+ESP:AddDivider()
+
+local DrawHealthbar = ESP:AddCheckbox("DrawHealthbar", {
+    Text = "Draw Healthbars",
+    Default = false,
+    Callback = function(Value) -- IMPORTANT
+        config.Healthbar.Enabled = Value
+        for _, plr in pairs(Players:GetChildren()) do
+            local char = plr.Character
+            local drawnew = true
+            for _,v in pairs(healthbars) do
+                if v[2] == plr then
+                    drawnew = false
+                end
+            end
+            if config.Healthbar.Enabled and drawnew then
+                local foreground, background = drawHealthBar(char)
+                updateHealthBar(char, foreground, background)
+                table.insert(healthbars, {{foreground, background}, plr})
+            end
+        end
+    end
+})
+
+local DrawHealthbarBackground = ESP:AddCheckbox("DrawHealthbarBackground", {
+    Text = "Draw Healthbar Background",
+    Default = false,
+    Callback = function(Value) -- IMPORTANT
+        config.Healthbar.Background = Value
+    end
+})
+
+local HealthbarColor = DrawHealthbar:AddColorPicker("HealthbarColor", {
+    Default = Color3.fromRGB(0, 255, 0),
+    Title = "Healthbar Color",
+    Transparency = 0, -- 0 to 1
+
+    Callback = function(Value) -- IMPORTANT
+        config.Healthbar.Color = Value
+    end
+})
+
+local HealthbarBackgroundColor = DrawHealthbarBackground:AddColorPicker("HealthbarBackgroundColor", {
+    Default = Color3.fromRGB(0, 0, 0),
+    Title = "Healthbar Background Color",
+    Transparency = 0, -- 0 to 1
+
+    Callback = function(Value) -- IMPORTANT
+        config.Healthbar.BackgroundColor = Value
+    end
+})
+
+local HealthbarPadding = ESP:AddSlider("HealthbarPadding", {
+    Text = "Healthbar Padding",
+    Default = 2,
+    Min = 0,
+    Max = 10,
+    Rounding = 0,
+    Compact = false,
+    Callback = function(Value) -- IMPORTANT
+        config.Healthbar.Padding = Value
+    end
+})
+
+local HealthbarThickness = ESP:AddSlider("HealthbarThickness", {
+    Text = "Healthbar Thickness",
+    Default = 2,
+    Min = 1,
+    Max = 10,
+    Rounding = 0,
+    Compact = false,
+    Callback = function(Value) -- IMPORTANT
+        config.Healthbar.Thickness = Value
+    end
+})
+
+local HealthbarSize = ESP:AddSlider("HealthbarSize", {
+    Text = "Healthbar Size",
+    Default = 5,
+    Min = 0,
+    Max = 10,
+    Rounding = 0,
+    Compact = false,
+    Callback = function(Value) -- IMPORTANT
+        config.Healthbar.Size = Value
+    end
+})
+
+-- ESP END
+
+-- FLAGS START
+
+local ToggleNames = Flags:AddCheckbox("ToggleNames", {
+    Text = "Toggle Name",
+    Default = false,
+    Callback = function(Value) -- IMPORTANT
+        config.Name.Enabled = Value
+        for _, plr in pairs(Players:GetChildren()) do
+            local char = plr.Character
+            local drawnew = true
+            for _,v in pairs(usernames) do
+                if v[2] == plr then
+                    drawnew = false
+                end
+            end
+            if config.Name.Enabled and drawnew then
+                local username = drawUsername(char)
+                updateUsername(char, username)
+                table.insert(usernames, {username, plr})
+            end
+        end
+    end
+})
+
+local ToggleDistance = Flags:AddCheckbox("ToggleDistance", {
+    Text = "Toggle Distance",
+    Default = false,
+    Callback = function(Value) -- IMPORTANT
+        config.Distance.Enabled = Value
+        for _, plr in pairs(Players:GetChildren()) do
+            local char = plr.Character
+            local drawnew = true
+            for _,v in pairs(dists) do
+                if v[2] == plr then
+                    drawnew = false
+                end
+            end
+            if config.Distance.Enabled and drawnew then
+                local Distance = drawDistance(char)
+                updateDistance(char, Distance)
+                table.insert(dists, {Distance, plr})
+            end
+        end
+    end
+})
+
+local ToggleNamesOutlines = Flags:AddCheckbox("ToggleNamesOutlines", {
+    Text = "Toggle Name Outlines",
+    Default = false,
+    Callback = function(Value) -- IMPORTANT
+        config.Name.Outlines = Value
+    end
+})
+
+local ToggleDistanceOutlines = Flags:AddCheckbox("ToggleDistanceOutlines", {
+    Text = "Toggle Distance Outlines",
+    Default = false,
+    Callback = function(Value) -- IMPORTANT
+        config.Distance.Outlines = Value
+    end
+})
+
+local NameColor = ToggleNames:AddColorPicker("NameColor", {
+    Default = Color3.fromRGB(255, 255, 255),
+    Title = "Name Color",
+    Transparency = 0, -- 0 to 1
+
+    Callback = function(Value) -- IMPORTANT
+        config.Name.Color = Value
+    end
+})
+
+local DistanceColor = ToggleDistance:AddColorPicker("DistanceColor", {
+    Default = Color3.fromRGB(255, 255, 255),
+    Title = "Distance Color",
+    Transparency = 0, -- 0 to 1
+
+    Callback = function(Value) -- IMPORTANT
+        config.Distance.Color = Value
+    end
+})
+
+local NameOutlineColor = ToggleNamesOutlines:AddColorPicker("NameOutlineColor", {
+    Default = Color3.fromRGB(0, 0, 0),
+    Title = "Name Outline Color",
+    Transparency = 0, -- 0 to 1
+
+    Callback = function(Value) -- IMPORTANT
+        config.Name.OutlinesColor = Value
+    end
+})
+
+local DistanceOutlineColor = ToggleDistanceOutlines:AddColorPicker("DistanceOutlineColor", {
+    Default = Color3.fromRGB(0, 0, 0),
+    Title = "Distance Outline Color",
+    Transparency = 0, -- 0 to 1
+
+    Callback = function(Value) -- IMPORTANT
+        config.Distance.OutlinesColor = Value
+    end
+})
+
+-- FLAGS END
+
+-- SETTINGS START
+local SaveBox = UISettingsTab:AddLeftGroupbox("Menu Configuration", "wrench")
+
+SaveBox:AddLabel("Menu bind")
+	:AddKeyPicker("MenuKeybind", { Default = "RightShift", NoUI = true, Text = "Menu keybind" })
+
+SaveBox:AddToggle("ShowCustomCursor", {
+	Text = "Custom Cursor",
+	Default = true,
+	Callback = function(Value)
+		Library.ShowCustomCursor = Value
+	end,
+})
+
+Library.ToggleKeybind = Options.MenuKeybind
