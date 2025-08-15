@@ -148,13 +148,49 @@ local function applyGunMods()
                 if config.GunMods.InstantHit then
                     print("INSTANT HIT")
                     rawset(v, "BulletVelocity", 99999)
+                    rawset(v, "Drag", 0.0001)
                 end
                 if config.GunMods.InfiniteWallbang then
                     rawset(v, "Penetration", math.huge)
+                    rawset(v, "ArmorPierce", 99999)
                 end
             end
         end
     end
+end
+
+local gc = getgc()
+local c = {"workspace", "Vehicles", "RocketLauncher", "GrenadeLauncher"}
+
+local func
+for _,v in pairs(gc) do
+    if typeof(v) == 'function' and not iscclosure(v) then
+        local consts = getconstants(v)
+        local found = 0
+        for _,const in pairs(c) do
+            if table.find(consts, const) then
+                found = found + 1
+            end
+        end
+        if found == #c then
+            func = v
+        end
+    end
+end
+
+if not func then warn("car penetration func not found - cars not penatrable") end
+
+if func then
+    local old; old = hookfunction(func, function(...)
+        if not config.GunMods.InfiniteWallbang then
+            return old(...)
+        end
+        local args = {...}
+        if args[2].Instance:IsDescendantOf(workspace.Vehicles) then
+            return true
+        end
+        return old(...)
+    end)
 end
 
 local function wallcheck(target)
@@ -774,7 +810,7 @@ local function expand(char, plr)
     if not char then warn("char could not be found"); return end
     local part = char:FindFirstChild(config.Hitbox.Part)
     print(config.Hitbox.Part, char:FindFirstChild(config.Hitbox.Part))
-    if not part then warn("Failed to expand", char); return end
+    if part == nil then warn("Failed to expand", char); return end
 
     if config.Hitbox.Enabled == false then
         char.Head.Size = partsizes["Head"]
