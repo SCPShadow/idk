@@ -149,62 +149,8 @@ local function applyGunMods()
                     print("INSTANT HIT")
                     rawset(v, "BulletVelocity", 99999)
                 end
-                --rawset(v, "Spread", 0) -- just always set spread to 0, its practically 0 by default anyways
-            end
-        end
-    end
-end
-
-local gc1 = getgc()
-local func
-
-local consts = {
-    "RocketLauncher", "GrenadeLauncher", "Penetration", "Vehicles", "Unit", "BulletVelocity", "NewPosition", "NewVelocity"
-}
-
-local gc1 = getgc(true)
-local func
-
-local consts = {
-    "RocketLauncher", "GrenadeLauncher", "Penetration", "Vehicles",
-    "Unit", "BulletVelocity", "NewPosition", "NewVelocity"
-}
-
-for i,v in pairs(gc1) do
-    if typeof(v) == "function" and islclosure(v) then
-        local c = debug.getconstants(v)
-        local found = 0
-        for _,j in pairs(c) do
-            if table.find(consts, tostring(j)) then
-                found = found + 1
-            end
-        end
-
-        if found == #consts then
-            local info = debug.getinfo(v)
-            if info.short_src:find('ClientHit') then
-                func = v
-            end
-        end
-    end
-end
-
-for _, v in ipairs(gc1) do
-    if (typeof(v) == 'function' and islclosure(v)) then
-        local upvals = debug.getupvalues(v)
-        for i, upval in upvals do
-            if (typeof(upval) == 'function') then
-                if (upval == func) then
-                    print(i, v,func)
-                    local old = func
-                    debug.setupvalue(v, i, function(...)
-                        local args = { ... }
-                        print('inf penetration!!')
-                        if config.GunMods.InfiniteWallbang then
-                            args[1].UserData.Penetration = math.huge
-                        end
-                        return old(unpack(args))
-                    end)
+                if config.GunMods.InfiniteWallbang then
+                    rawset(v, "Penetration", math.huge)
                 end
             end
         end
