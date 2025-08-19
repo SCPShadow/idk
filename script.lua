@@ -133,7 +133,9 @@ local config = {
     GunMods = {
         InfiniteWallbang = false,
         InstantHit = false,
-        Recoil = false
+        Recoil = false,
+        AutoRefill = false,
+        AutoRefillPercent = false
     },
 }
 -- VARIABLES --
@@ -178,20 +180,15 @@ for _,v in pairs(gc) do
     end
 end
 
-if not func then warn("car penetration func not found - cars not penatrable") end
+if not func then print("func not found") end
 
-if func then
-    local old; old = hookfunction(func, function(...)
-        if not config.GunMods.InfiniteWallbang then
-            return old(...)
-        end
-        local args = {...}
-        if args[2].Instance:IsDescendantOf(workspace.Vehicles) then
-            return true
-        end
-        return old(...)
-    end)
-end
+local old; old = hookfunction(func, function(...)
+    local args = {...}
+    if args[2].Instance:IsDescendantOf(workspace.Vehicles) then
+        return true
+    end
+    return old(...)
+end)
 
 local function wallcheck(target)
     local r = Ray.new(lp.Character.Head.Position, (target.Position - lp.Character.Head.Position).Unit * 3000)
@@ -839,14 +836,14 @@ for _,plr in pairs(Players:GetChildren()) do
 end
 
 if lp.Team.Name ~= "Neutral" and config.GunMods.InstantHit then
-    --applyGunMods()
+    applyGunMods()
 end
 lp.CharacterAdded:Connect(function(char)
     local applied = false
     char.ChildAdded:Connect(function(child)
         if child:IsA("Tool") and child:FindFirstChild("Shoot") and not applied then -- is it a gun?
             applied = true
-            --applyGunMods()
+            applyGunMods()
         end
     end)
 end)
@@ -939,6 +936,39 @@ if lp.Team.Name ~= "Neutral" then
             end)
         end
     end
+    local gc = getgc()
+    local c = {"workspace", "Vehicles", "RocketLauncher", "GrenadeLauncher"}
+
+    local func
+    for _,v in pairs(gc) do
+        if typeof(v) == 'function' and not iscclosure(v) then
+            local consts = getconstants(v)
+            local found = 0
+            for _,const in pairs(c) do
+                if table.find(consts, const) then
+                    found = found + 1
+                end
+            end
+            if found == #c then
+                func = v
+            end
+        end
+    end
+
+    if not func then warn("car penetration func not found - cars not penatrable") end
+
+    if func then
+        local old; old = hookfunction(func, function(...)
+            if not config.GunMods.InfiniteWallbang then
+                return old(...)
+            end
+            local args = {...}
+            if args[2].Instance:IsDescendantOf(workspace.Vehicles) then
+                return true
+            end
+            return old(...)
+        end)
+    end
 else
     game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = "Waiting for Team Join",
@@ -967,6 +997,101 @@ end
 if not hooked then
     Players.LocalPlayer:Kick("Silent Aim Function not found, please rejoin!")
 end
+
+
+local function getWeapon()
+    local weapon = nil
+    local char = lp.Character
+
+    if not char then return nil end
+
+    for _,tool in pairs(char:GetChildren()) do
+        if tool:IsA("Tool") and tool:FindFirstChild("IsWeapon") and tool.IsWeapon.Value then
+            weapon = tool
+            break
+        end
+    end
+
+    return weapon
+end
+
+local function getAmmo(weapon)
+    local ammo = {}
+    local MaxAmmo = weapon:WaitForChild("MaxAmmo").Value
+    local magFolder = weapon:WaitForChild("Magazines"):GetChildren()
+    ammo.CurrentMag = weapon:WaitForChild("CurrentMagazine").Value.Value
+    local magCount = #magFolder
+    local emptiedMags = 0
+    
+    for _,mag in pairs(magFolder) do
+        if mag.Value < MaxAmmo and mag ~= ammo.CurrentMag then
+            emptiedMags += 1
+        end
+    end
+
+    ammo.PercentageEmpty = emptiedMags/magCount * 100
+    ammo.MaxAmmo = MaxAmmo
+    return ammo
+end
+
+local function reload(weapon)
+    local reloadTime = weapon.ReloadTime.Value
+    weapon.Reloading.Value = true
+    local weaponRemote = game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Weapon")
+    weaponRemote:FireServer("Reload")
+    task.wait(reloadTime)
+    weaponRemote:FireServer("Reload")
+    weapon.Reloading.Value = false
+end
+
+local function getAmmoBox()
+    local closest = nil
+    local char = lp.Character
+
+    if not char then return nil end
+
+    for _,box in pairs(game.Workspace.AmmoCrates:GetChildren()) do
+        if closest == nil or (char.HumanoidRootPart.Position - closest.Position).Magnitude > (char.HumanoidRootPart.Position - box.Position).Magnitude then
+            closest = box
+        end
+    end
+
+    return closest
+end
+
+local function refill()
+    local ammoBox = getAmmoBox()
+
+    if ammoBox == nil then return end
+
+    local weapon = getWeapon()
+
+    if weapon == nil then return end
+
+    local ammo = getAmmo(weapon) -- ammo.CurrentMag, ammo.PercentageEmpty, ammo.MaxAmmo
+
+    if ammo.PercentageEmpty >= config.GunMods.AutoRefillPercent then
+        table.foreach(ammo, print)
+        if ammo.CurrentMag < ammo.MaxAmmo then
+            reload(weapon) -- does this wait until its done first?
+        end
+
+        local tempCFrame = lp.Character.HumanoidRootPart.CFrame
+        lp.Character:PivotTo(ammoBox.CFrame)
+        task.wait(0.1)
+        fireproximityprompt(ammoBox.ProximityPrompt)
+        task.wait(0.1)
+        lp.Character:PivotTo(tempCFrame)
+    end
+end
+
+task.spawn(function()
+    while task.wait(1) do
+        if config.GunMods.AutoRefill then
+            refill()
+        end
+    end
+end)
 
 -- FUNCTIONS --
 
@@ -1134,6 +1259,27 @@ local ToggleRecoil = GunMods:AddCheckbox("ToggleRecoil", {
             if name == "recoil" then return end
             return bind(name, ...)
         end)
+    end
+})
+
+local ToggleAutoRefill = GunMods:AddCheckbox("ToggleAutoRefill", {
+    Text = "Toggle Auto Refill",
+    Default = false,
+    Tooltip = "Automatically refills your ammo from ammo boxes when below a certain percentage of ammo",
+    Callback = function(Value) -- IMPORTANT
+        config.GunMods.AutoRefill = Value
+    end
+})
+
+local AutoRefillPercent = GunMods:AddSlider("AutoRefillPercent", {
+    Text = "Auto Refill Minimum Empty %",
+    Default = 50,
+    Min = 0,
+    Max = 100,
+    Rounding = 0,
+    Compact = false,
+    Callback = function(Value) -- IMPORTANT
+        config.GunMods.AutoRefillPercent = Value
     end
 })
 
